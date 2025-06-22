@@ -20,7 +20,7 @@ import Footer from "./footer";
 
 export default function Home() {
   return (
-    <div className="tw-min-h-screen tw-bg-gray-100">
+    <div className="tw:min-h-screen">
       <NavBar />
       <Hero />
       <Popular />
