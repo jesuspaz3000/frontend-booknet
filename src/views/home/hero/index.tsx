@@ -36,7 +36,7 @@ const swiperStyles = `
 
 const books = [
     {
-        name: "Señor de los anillos",
+        name: "El Señor de los anillos",
         image: "/Images/senior-de-los-anillos.jpg",
         description: "La historia de un grupo de amigos que se embarcan en una aventura épica para salvar el mundo.",
         age: '16+',
@@ -103,12 +103,12 @@ export default function Hero() {
                 </Swiper>
                 <div className="tw:absolute tw:bottom-0 tw:w-full tw:px-16 tw:pb-[20vh] tw:flex tw:items-start tw:flex-col tw:z-10 tw:pointer-events-none">
                     <div className="tw:w-[25%] tw:py-20 tw:flex tw:flex-col tw:justify-center tw:gap-4 tw:pointer-events-auto">
-                        <h1 className="tw:text-7xl tw:text-white tw-font-bold">{books[activeSlide].name}</h1>
+                        <h1 className="tw:text-5xl 2xl:tw:text-7xl tw:text-white tw-font-bold">{books[activeSlide].name}</h1>
                         <div className="tw:flex tw:gap-4">
                             <span className="tw:text-white">{books[activeSlide].age}</span>
                             <span className="tw:text-white">{books[activeSlide].year}</span>
                         </div>
-                        <p className="tw:text-white tw:text-2xl">{books[activeSlide].description}</p>
+                        <p className="tw:text-white tw:text-xl 2xl:tw:text-2xl">{books[activeSlide].description}</p>
                         <Button
                             variant="contained"
                             sx={{
