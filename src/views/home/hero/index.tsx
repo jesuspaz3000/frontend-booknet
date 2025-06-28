@@ -95,7 +95,7 @@ export default function Hero() {
                                 alt={book.name}
                                 width={1500}
                                 height={1000}
-                                className="tw:h-[90vh] tw:object-cover tw:w-auto tw:z-0"
+                                className="tw:h-[95vh] tw:object-cover tw:w-auto tw:z-0"
                             />
                             <div className="tw:absolute tw:inset-0 tw:bg-gradient-to-t tw:from-black tw:via-black/20 tw:to-transparent tw:z-10"></div>
                         </SwiperSlide>
