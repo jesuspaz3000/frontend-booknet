@@ -11,13 +11,30 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 export default function NavBar() {
     const [expanded, setExpanded] = useState(false);
     const [searchExpanded, setSearchExpanded] = useState(false);
+    const [isMenuLocked, setIsMenuLocked] = useState(false); // Nuevo estado para controlar el menú
 
     const handleMouseEnter = () => {
-        setExpanded(true);
+        if (!isMenuLocked) {
+            setExpanded(true);
+        }
     };
 
     const handleMouseLeave = () => {
+        if (!isMenuLocked) {
+            setExpanded(false);
+        }
+    };
+
+    // Función para manejar clicks en los enlaces del menú
+    const handleMenuItemClick = () => {
         setExpanded(false);
+        setIsMenuLocked(false);
+    };
+
+    // Función para alternar el menú con click
+    const handleUserButtonClick = () => {
+        setExpanded(!expanded);
+        setIsMenuLocked(!expanded); // Si se expande, se bloquea el hover
     };
 
     const handleSearchClick = () => {
@@ -33,13 +50,15 @@ export default function NavBar() {
             <div className="tw:absolute tw:z-10 tw:bg-black tw:opacity-50 tw:w-full tw:h-full"></div>
             <div className="tw:px-16 tw:flex tw:justify-between tw:items-center tw:w-full">
                 <div className="tw:z-50 tw:cursor-pointer">
-                    <Image
-                        src="/images/BookNetLogo.png"
-                        width={150}
-                        height={100}
-                        alt="logo"
+                    <Link href="/">
+                        <Image
+                            src="/images/BookNetLogo.png"
+                            width={150}
+                            height={100}
+                            alt="logo"
                         className="tw:rounded-full"
-                    />
+                        />
+                    </Link>
                 </div>
                 <div className="tw:flex tw:text-xl tw:font-bold tw:gap-10 tw:z-50">
                     <Link href="/">Inicio</Link>
@@ -59,6 +78,7 @@ export default function NavBar() {
                     >
                             {/* Botón usuario expandido o contraído */}
                             <Button
+                                onClick={handleUserButtonClick} // Agregado onClick
                                 sx={{
                                     display: 'flex',
                                     alignItems: 'center',
@@ -86,7 +106,7 @@ export default function NavBar() {
                                 />
                                 {expanded && (
                                     <span style={{ fontSize: '14px', fontWeight: 500, whiteSpace: 'nowrap' }}>
-                                        Jesus
+                                        User
                                     </span>
                                 )}
                                 {expanded && <ExpandLessIcon sx={{ marginLeft: 'auto' }} />}
@@ -104,9 +124,8 @@ export default function NavBar() {
                                         borderRadius: '4px',
                                         minWidth: '250px',
                                         padding: '12px 0',
-                                        marginTop: '4px', // Reducido de 8px a 4px
+                                        marginTop: '4px',
                                         boxShadow: '0 4px 12px rgba(0,0,0,0.5)',
-                                        // Agregar un pseudo-elemento para conectar el botón con el menú
                                         '&::before': {
                                             content: '""',
                                             position: 'absolute',
@@ -118,50 +137,70 @@ export default function NavBar() {
                                         }
                                     }}
                                 >
-                                    {/* Perfiles */}
-                                    {/* <Box sx={{ borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '12px', marginBottom: '12px' }}>
-                                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, padding: '8px 16px', cursor: 'pointer', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}>
-                                            <Image src="/images/perfil.jpeg" width={24} height={24} alt='jesus' className='tw:rounded-full' />
-                                            <span style={{ color: 'white', fontSize: '14px' }}>Jesus</span>
-                                        </Box>
-                                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, padding: '8px 16px', cursor: 'pointer', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}>
-                                            <Image src="/images/ninos.png" width={24} height={24} alt='niños' className='tw:rounded' />
-                                            <span style={{ color: 'white', fontSize: '14px' }}>Niños</span>
-                                        </Box>
-                                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, padding: '8px 16px', cursor: 'pointer', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}>
-                                            <Image src="/images/miguel.jpg" width={24} height={24} alt='miguel' className='tw:rounded-full' />
-                                            <span style={{ color: 'white', fontSize: '14px' }}>Miguel</span>
-                                        </Box>
-                                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, padding: '8px 16px', cursor: 'pointer', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}>
-                                            <Image src="/images/raquel.jpg" width={24} height={24} alt='raquel' className='tw:rounded-full' />
-                                            <span style={{ color: 'white', fontSize: '14px' }}>Raquelazo</span>
-                                        </Box>
-                                    </Box> */}
-
                                     {/* Opciones de menú */}
                                     <Box sx={{ padding: '0 8px' }}>
-                                        {/* <Box sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}>
-                                            <span style={{ color: 'white', fontSize: '13px' }}>Administra los perfiles</span>
-                                        </Box> */}
-                                        <Box sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}>
-                                            <span style={{ color: 'white', fontSize: '20px' }}>Ajustes</span>
+                                        <Box 
+                                            sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
+                                            onClick={handleMenuItemClick} // Agregado onClick
+                                        >
+                                            <Link 
+                                                style={{ color: 'white', fontSize: '20px', textDecoration: 'none', display: 'block', width: '100%' }} 
+                                                href="/configurations"
+                                            >
+                                                Ajustes
+                                            </Link>
                                         </Box>
-                                        <Box sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}>
-                                            <span style={{ color: 'white', fontSize: '20px' }}>Cuenta</span>
+                                        <Box 
+                                            sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
+                                            onClick={handleMenuItemClick} // Agregado onClick
+                                        >
+                                            <Link 
+                                                style={{ color: 'white', fontSize: '20px', textDecoration: 'none', display: 'block', width: '100%' }} 
+                                                href="/accountSettings"
+                                            >
+                                                Cuenta
+                                            </Link>
                                         </Box>
-                                        <Box sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}>
-                                            <span style={{ color: 'white', fontSize: '20px' }}>Suscripción:</span>
+                                        <Box 
+                                            sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
+                                            onClick={handleMenuItemClick}
+                                        >
+                                            <Link 
+                                                style={{ color: 'white', fontSize: '20px', textDecoration: 'none', display: 'block', width: '100%' }} 
+                                                href="/"
+                                            >
+                                                Suscripción
+                                            </Link>
                                         </Box>
-                                        <Box sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}>
-                                            <span style={{ color: 'white', fontSize: '20px' }}>Privacidad y Términos</span>
+                                        <Box 
+                                            sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
+                                            onClick={handleMenuItemClick}
+                                        >
+                                            <Link 
+                                                style={{ color: 'white', fontSize: '20px', textDecoration: 'none', display: 'block', width: '100%' }} 
+                                                href="/"
+                                            >
+                                                Privacidad y Términos
+                                            </Link>
                                         </Box>
-                                        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}>
-                                            <span style={{ color: 'white', fontSize: '20px' }}>Ayuda</span>
+                                        <Box 
+                                            sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
+                                            onClick={handleMenuItemClick}
+                                        >
+                                            <Link 
+                                                style={{ color: 'white', fontSize: '20px', textDecoration: 'none', flex: 1 }} 
+                                                href="/"
+                                            >
+                                                Ayuda
+                                            </Link>
                                             <Box sx={{ transform: 'rotate(-45deg)', fontSize: '12px', color: 'white' }}>↗</Box>
                                         </Box>
                                         
                                         <Box sx={{ borderTop: '1px solid rgba(255,255,255,0.1)', marginTop: '12px', paddingTop: '12px' }}>
-                                            <Box sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}>
+                                            <Box 
+                                                sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
+                                                onClick={handleMenuItemClick}
+                                            >
                                                 <span style={{ color: 'white', fontSize: '20px' }}>Cerrar sesión</span>
                                             </Box>
                                         </Box>
@@ -181,7 +220,6 @@ export default function NavBar() {
                         left: 0,
                         right: 0,
                         backgroundColor: 'rgba(0,0,0,0.5)',
-                        /* backdropFilter: 'blur(10px)', */
                         padding: '20px 0',
                         boxShadow: '0 4px 20px rgba(0,0,0,0.5)',
                         zIndex: 40,
@@ -207,9 +245,6 @@ export default function NavBar() {
                                 onFocus={(e) => {
                                     e.target.style.borderColor = 'rgba(255,255,255,0.6)';
                                 }}
-                                /* onBlur={(e) => {
-                                    e.target.style.borderColor = 'rgba(255,255,255,0.3)';
-                                }} */
                             />
                         </Box>
                         <IconButton 
