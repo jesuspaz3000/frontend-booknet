@@ -161,7 +161,7 @@ export default function NavBar() {
                                                 Cuenta
                                             </Link>
                                         </Box>
-                                        <Box 
+                                        {/* <Box 
                                             sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
                                             onClick={handleMenuItemClick}
                                         >
@@ -194,7 +194,7 @@ export default function NavBar() {
                                                 Ayuda
                                             </Link>
                                             <Box sx={{ transform: 'rotate(-45deg)', fontSize: '12px', color: 'white' }}>↗</Box>
-                                        </Box>
+                                        </Box> */}
                                         
                                         <Box sx={{ borderTop: '1px solid rgba(255,255,255,0.1)', marginTop: '12px', paddingTop: '12px' }}>
                                             <Box 
