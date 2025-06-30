@@ -1,7 +1,13 @@
-export default function genreBook() {
+'use client'
+
+import { bookList } from '@/constants/books';
+import BookCarrousel from '@/components/commons/bookCarrousel';
+
+export default function GenreBook() {
     return (
-        <div>
-            <h1>Genero literario</h1>
+        <div className='tw:mb-8'>
+            <h1 className="tw:px-16 tw:text-2xl tw:font-bold tw:mb-4">Género Literario</h1>
+            <BookCarrousel bookList={bookList} />
         </div>
-    )
+    );
 }
