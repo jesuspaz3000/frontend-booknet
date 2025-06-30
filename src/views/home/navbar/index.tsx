@@ -11,7 +11,7 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 export default function NavBar() {
     const [expanded, setExpanded] = useState(false);
     const [searchExpanded, setSearchExpanded] = useState(false);
-    const [isMenuLocked, setIsMenuLocked] = useState(false); // Nuevo estado para controlar el menú
+    const [isMenuLocked, setIsMenuLocked] = useState(false);
 
     const handleMouseEnter = () => {
         if (!isMenuLocked) {
@@ -25,16 +25,14 @@ export default function NavBar() {
         }
     };
 
-    // Función para manejar clicks en los enlaces del menú
     const handleMenuItemClick = () => {
         setExpanded(false);
         setIsMenuLocked(false);
     };
 
-    // Función para alternar el menú con click
     const handleUserButtonClick = () => {
         setExpanded(!expanded);
-        setIsMenuLocked(!expanded); // Si se expande, se bloquea el hover
+        setIsMenuLocked(!expanded);
     };
 
     const handleSearchClick = () => {
@@ -43,6 +41,13 @@ export default function NavBar() {
 
     const handleSearchClose = () => {
         setSearchExpanded(false);
+    };
+
+    // Manejar tecla Escape para cerrar búsqueda
+    const handleKeyDown = (event: React.KeyboardEvent) => {
+        if (event.key === 'Escape') {
+            handleSearchClose();
+        }
     };
 
     return (
@@ -76,9 +81,8 @@ export default function NavBar() {
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     >
-                            {/* Botón usuario expandido o contraído */}
                             <Button
-                                onClick={handleUserButtonClick} // Agregado onClick
+                                onClick={handleUserButtonClick}
                                 sx={{
                                     display: 'flex',
                                     alignItems: 'center',
@@ -112,7 +116,6 @@ export default function NavBar() {
                                 {expanded && <ExpandLessIcon sx={{ marginLeft: 'auto' }} />}
                             </Button>
 
-                            {/* Menú desplegable */}
                             <Collapse in={expanded} timeout={200}>
                                 <Box
                                     sx={{
@@ -137,11 +140,10 @@ export default function NavBar() {
                                         }
                                     }}
                                 >
-                                    {/* Opciones de menú */}
                                     <Box sx={{ padding: '0 8px' }}>
                                         <Box 
                                             sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
-                                            onClick={handleMenuItemClick} // Agregado onClick
+                                            onClick={handleMenuItemClick}
                                         >
                                             <Link 
                                                 style={{ color: 'white', fontSize: '20px', textDecoration: 'none', display: 'block', width: '100%' }} 
@@ -152,7 +154,7 @@ export default function NavBar() {
                                         </Box>
                                         <Box 
                                             sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
-                                            onClick={handleMenuItemClick} // Agregado onClick
+                                            onClick={handleMenuItemClick}
                                         >
                                             <Link 
                                                 style={{ color: 'white', fontSize: '20px', textDecoration: 'none', display: 'block', width: '100%' }} 
@@ -161,40 +163,6 @@ export default function NavBar() {
                                                 Cuenta
                                             </Link>
                                         </Box>
-                                        {/* <Box 
-                                            sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
-                                            onClick={handleMenuItemClick}
-                                        >
-                                            <Link 
-                                                style={{ color: 'white', fontSize: '20px', textDecoration: 'none', display: 'block', width: '100%' }} 
-                                                href="/"
-                                            >
-                                                Suscripción
-                                            </Link>
-                                        </Box>
-                                        <Box 
-                                            sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
-                                            onClick={handleMenuItemClick}
-                                        >
-                                            <Link 
-                                                style={{ color: 'white', fontSize: '20px', textDecoration: 'none', display: 'block', width: '100%' }} 
-                                                href="/"
-                                            >
-                                                Privacidad y Términos
-                                            </Link>
-                                        </Box>
-                                        <Box 
-                                            sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
-                                            onClick={handleMenuItemClick}
-                                        >
-                                            <Link 
-                                                style={{ color: 'white', fontSize: '20px', textDecoration: 'none', flex: 1 }} 
-                                                href="/"
-                                            >
-                                                Ayuda
-                                            </Link>
-                                            <Box sx={{ transform: 'rotate(-45deg)', fontSize: '12px', color: 'white' }}>↗</Box>
-                                        </Box> */}
                                         
                                         <Box sx={{ borderTop: '1px solid rgba(255,255,255,0.1)', marginTop: '12px', paddingTop: '12px' }}>
                                             <Box 
@@ -211,8 +179,8 @@ export default function NavBar() {
                 </div>
             </div>
 
-            {/* Desplegable de búsqueda */}
-            <Collapse in={searchExpanded} timeout={300}>
+            {/* Desplegable de búsqueda con animación sincronizada */}
+            <Collapse in={searchExpanded} timeout={150}>
                 <Box
                     sx={{
                         position: 'absolute',
@@ -223,14 +191,24 @@ export default function NavBar() {
                         padding: '20px 0',
                         boxShadow: '0 4px 20px rgba(0,0,0,0.5)',
                         zIndex: 40,
+                        overflow: 'hidden', // Previene glitches visuales durante la animación
                     }}
+                    onKeyDown={handleKeyDown}
                 >
-                    <div className="tw:px-16 tw:flex tw:items-center tw:gap-4">
+                    <div 
+                        className="tw:px-16 tw:flex tw:items-center tw:gap-4"
+                        style={{
+                            opacity: searchExpanded ? 1 : 0,
+                            transform: searchExpanded ? 'translateY(0)' : 'translateY(-10px)',
+                            transition: 'opacity 0.15s ease, transform 0.15s ease',
+                        }}
+                    >
                         <Box sx={{ flex: 1, position: 'relative' }}>
                             <input
                                 type="text"
                                 placeholder="Buscar series, libros, documentales..."
                                 autoFocus
+                                onKeyDown={handleKeyDown}
                                 style={{
                                     width: '100%',
                                     padding: '12px 20px',
@@ -240,7 +218,7 @@ export default function NavBar() {
                                     borderRadius: '8px',
                                     color: 'white',
                                     outline: 'none',
-                                    transition: 'border-color 0.3s ease',
+                                    transition: 'border-color 0.2s ease',
                                 }}
                                 onFocus={(e) => {
                                     e.target.style.borderColor = 'rgba(255,255,255,0.6)';
@@ -255,7 +233,11 @@ export default function NavBar() {
                                 width: '40px',
                                 height: '40px',
                                 minWidth: '40px',
-                                '&:hover': { backgroundColor: 'rgba(255,255,255,0.2)' }
+                                transition: 'all 0.15s ease',
+                                '&:hover': { 
+                                    backgroundColor: 'rgba(255,255,255,0.2)',
+                                    transform: 'scale(1.05)'
+                                }
                             }}
                             onClick={handleSearchClose}
                         >

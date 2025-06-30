@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, CSSProperties } from 'react';
 
 import Image from 'next/image';
 import { Button } from '@mui/material';
@@ -28,7 +28,7 @@ export default function Hero() {
         '--swiper-pagination-color': 'white',
         '--swiper-pagination-bullet-inactive-color': 'rgba(255, 255, 255, 0.5)',
         '--swiper-pagination-bullet-inactive-opacity': '1',
-    } as React.CSSProperties;
+    } as CSSProperties;
 
     return (
         <>
