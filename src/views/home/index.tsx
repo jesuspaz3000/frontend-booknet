@@ -1,3 +1,4 @@
+"use client";
 
 import NavBar from "./navbar";
 import Hero from "./hero";

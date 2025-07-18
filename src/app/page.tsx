@@ -1,9 +1,5 @@
-import Home from "@/views/home";
+import { redirect } from 'next/navigation';
 
-export default function HomePage() {
-  return (
-    <div>
-      <Home />
-    </div>
-  );
+export default function Page() {
+  redirect('/login');
 }

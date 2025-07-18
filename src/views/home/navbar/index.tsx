@@ -59,45 +59,90 @@ export default function NavBar() {
                         <Image
                             src="/images/BookNetLogo.png"
                             width={150}
-                            height={100}
+                            height={150}
                             alt="logo"
-                        className="tw:rounded-full"
+                            className="tw:rounded-full tw:w-auto tw:h-[50px]"
                         />
                     </Link>
                 </div>
                 <div className="tw:flex tw:text-xl tw:font-bold tw:gap-10 tw:z-50">
-                    <Link href="/">Inicio</Link>
-                    <Link href="/">Series</Link>
-                    <Link href="/">Libros</Link>
-                    <Link href="/">Niños y Familia</Link>
+                    <Link href="/home">Inicio</Link>
+                    <Link href="/home">Series</Link>
+                    <Link href="/home">Libros</Link>
+                    <Link href="/home">Niños y Familia</Link>
                 </div>
                 <div className="tw:flex tw:items-center tw:gap-6 tw:z-50">
                     <IconButton sx={{ color: 'white' }} onClick={handleSearchClick}>
                         <SearchIcon sx={{ fontSize: '2rem' }} />
                     </IconButton>
-                    
-                    <Box 
+
+                    <Box
                         sx={{ position: 'relative' }}
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     >
-                            <Button
-                                onClick={handleUserButtonClick}
+                        {/* Botón usuario con posición fija */}
+                        <Button
+                            onClick={handleUserButtonClick}
+                            sx={{
+                                position: 'relative',
+                                zIndex: 60,
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: 1,
+                                padding: '8px 12px',
+                                borderRadius: '4px',
+                                backgroundColor: expanded ? 'rgba(0,0,0,0.8)' : 'transparent',
+                                color: 'white',
+                                transition: 'all 0.3s ease',
+                                width: '55px', // Ancho fijo para no desplazar otros elementos
+                                height: '55px',
+                                minWidth: '48px',
+                                justifyContent: 'center',
+                                '&:hover': {
+                                    backgroundColor: 'rgba(0,0,0,0.6)',
+                                }
+                            }}
+                        >
+                            <Image
+                                src="/images/perfil.jpeg"
+                                width={40}
+                                height={40}
+                                alt='perfil'
+                                className='tw:rounded-full'
+                            />
+                        </Button>
+
+                        {/* Versión expandida que aparece por encima */}
+                        {expanded && (
+                            <Box
                                 sx={{
+                                    position: 'absolute',
+                                    top: 0,
+                                    right: 0,
+                                    zIndex: 55,
                                     display: 'flex',
                                     alignItems: 'center',
-                                    gap: expanded ? 1 : 0,
-                                    padding: expanded ? '8px 12px' : '8px',
-                                    borderRadius: expanded ? '4px' : '50%',
-                                    backgroundColor: expanded ? 'rgba(0,0,0,0.8)' : 'transparent',
+                                    gap: 1,
+                                    padding: '8px 12px',
+                                    borderRadius: '4px',
+                                    backgroundColor: 'rgba(0,0,0,0.8)',
                                     color: 'white',
-                                    transition: 'all 0.3s ease',
-                                    minWidth: expanded ? '250px' : '48px',
-                                    width: expanded ? 'auto' : '48px',
+                                    minWidth: '250px',
                                     height: '48px',
-                                    justifyContent: expanded ? 'flex-start' : 'center',
-                                    '&:hover': {
-                                        backgroundColor: 'rgba(0,0,0,0.6)',
+                                    justifyContent: 'flex-start',
+                                    backdropFilter: 'blur(10px)',
+                                    boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+                                    animation: 'slideIn 0.3s ease-out',
+                                    '@keyframes slideIn': {
+                                        from: {
+                                            width: '48px',
+                                            opacity: 0.7,
+                                        },
+                                        to: {
+                                            width: '250px',
+                                            opacity: 1,
+                                        }
                                     }
                                 }}
                             >
@@ -108,74 +153,86 @@ export default function NavBar() {
                                     alt='perfil'
                                     className='tw:rounded-full'
                                 />
-                                {expanded && (
-                                    <span style={{ fontSize: '14px', fontWeight: 500, whiteSpace: 'nowrap' }}>
-                                        User
-                                    </span>
-                                )}
-                                {expanded && <ExpandLessIcon sx={{ marginLeft: 'auto' }} />}
-                            </Button>
+                                <span style={{ fontSize: '14px', fontWeight: 500, whiteSpace: 'nowrap' }}>
+                                    User
+                                </span>
+                                <ExpandLessIcon sx={{ marginLeft: 'auto' }} />
+                            </Box>
+                        )}
 
-                            <Collapse in={expanded} timeout={200}>
-                                <Box
-                                    sx={{
+                        {/* Menú desplegable */}
+                        <Collapse in={expanded} timeout={200}>
+                            <Box
+                                sx={{
+                                    position: 'absolute',
+                                    top: '100%',
+                                    right: 0,
+                                    backgroundColor: 'rgba(0,0,0,0.9)',
+                                    backdropFilter: 'blur(10px)',
+                                    borderRadius: '4px',
+                                    minWidth: '250px',
+                                    padding: '12px 0',
+                                    marginTop: '4px',
+                                    boxShadow: '0 4px 12px rgba(0,0,0,0.5)',
+                                    zIndex: 54,
+                                    '&::before': {
+                                        content: '""',
                                         position: 'absolute',
-                                        top: '100%',
-                                        right: 0,
-                                        backgroundColor: 'rgba(0,0,0,0.9)',
-                                        backdropFilter: 'blur(10px)',
-                                        borderRadius: '4px',
-                                        minWidth: '250px',
-                                        padding: '12px 0',
-                                        marginTop: '4px',
-                                        boxShadow: '0 4px 12px rgba(0,0,0,0.5)',
-                                        '&::before': {
-                                            content: '""',
-                                            position: 'absolute',
-                                            top: '-4px',
-                                            right: '0',
-                                            width: '100%',
-                                            height: '4px',
-                                            backgroundColor: 'transparent',
-                                        }
-                                    }}
-                                >
-                                    <Box sx={{ padding: '0 8px' }}>
-                                        <Box 
+                                        top: '-4px',
+                                        right: '0',
+                                        width: '100%',
+                                        height: '4px',
+                                        backgroundColor: 'transparent',
+                                    }
+                                }}
+                            >
+                                <Box sx={{ padding: '0 8px' }}>
+                                    <Box
+                                        sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
+                                        onClick={handleMenuItemClick}
+                                    >
+                                        <Link
+                                            style={{ color: 'white', fontSize: '20px', textDecoration: 'none', display: 'block', width: '100%' }}
+                                            href="/userManagement"
+                                        >
+                                            Gestionar Usuarios
+                                        </Link>
+                                    </Box>
+                                    <Box
+                                        sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
+                                        onClick={handleMenuItemClick}
+                                    >
+                                        <Link
+                                            style={{ color: 'white', fontSize: '20px', textDecoration: 'none', display: 'block', width: '100%' }}
+                                            href="/configurations"
+                                        >
+                                            Ajustes
+                                        </Link>
+                                    </Box>
+                                    <Box
+                                        sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
+                                        onClick={handleMenuItemClick}
+                                    >
+                                        <Link
+                                            style={{ color: 'white', fontSize: '20px', textDecoration: 'none', display: 'block', width: '100%' }}
+                                            href="/accountSettings"
+                                        >
+                                            Cuenta
+                                        </Link>
+                                    </Box>
+
+                                    <Box sx={{ borderTop: '1px solid rgba(255,255,255,0.1)', marginTop: '12px', paddingTop: '12px' }}>
+                                        <Box
                                             sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
                                             onClick={handleMenuItemClick}
                                         >
-                                            <Link 
-                                                style={{ color: 'white', fontSize: '20px', textDecoration: 'none', display: 'block', width: '100%' }} 
-                                                href="/configurations"
-                                            >
-                                                Ajustes
-                                            </Link>
-                                        </Box>
-                                        <Box 
-                                            sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
-                                            onClick={handleMenuItemClick}
-                                        >
-                                            <Link 
-                                                style={{ color: 'white', fontSize: '20px', textDecoration: 'none', display: 'block', width: '100%' }} 
-                                                href="/accountSettings"
-                                            >
-                                                Cuenta
-                                            </Link>
-                                        </Box>
-                                        
-                                        <Box sx={{ borderTop: '1px solid rgba(255,255,255,0.1)', marginTop: '12px', paddingTop: '12px' }}>
-                                            <Box 
-                                                sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
-                                                onClick={handleMenuItemClick}
-                                            >
-                                                <span style={{ color: 'white', fontSize: '20px' }}>Cerrar sesión</span>
-                                            </Box>
+                                            <span style={{ color: 'white', fontSize: '20px' }}>Cerrar sesión</span>
                                         </Box>
                                     </Box>
                                 </Box>
-                            </Collapse>
-                        </Box>
+                            </Box>
+                        </Collapse>
+                    </Box>
                 </div>
             </div>
 
@@ -191,11 +248,11 @@ export default function NavBar() {
                         padding: '20px 0',
                         boxShadow: '0 4px 20px rgba(0,0,0,0.5)',
                         zIndex: 40,
-                        overflow: 'hidden', // Previene glitches visuales durante la animación
+                        overflow: 'hidden',
                     }}
                     onKeyDown={handleKeyDown}
                 >
-                    <div 
+                    <div
                         className="tw:px-16 tw:flex tw:items-center tw:gap-4"
                         style={{
                             opacity: searchExpanded ? 1 : 0,
@@ -225,16 +282,16 @@ export default function NavBar() {
                                 }}
                             />
                         </Box>
-                        <IconButton 
-                            sx={{ 
-                                color: 'white', 
+                        <IconButton
+                            sx={{
+                                color: 'white',
                                 backgroundColor: 'rgba(255,255,255,0.1)',
                                 borderRadius: '50%',
                                 width: '40px',
                                 height: '40px',
                                 minWidth: '40px',
                                 transition: 'all 0.15s ease',
-                                '&:hover': { 
+                                '&:hover': {
                                     backgroundColor: 'rgba(255,255,255,0.2)',
                                     transform: 'scale(1.05)'
                                 }

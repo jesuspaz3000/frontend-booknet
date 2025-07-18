@@ -80,7 +80,7 @@ export default function Hero() {
                                 },
                             }}
                         >
-                            Ver ahora
+                            Leer ahora
                         </Button>
                     </div>
                 </div>
