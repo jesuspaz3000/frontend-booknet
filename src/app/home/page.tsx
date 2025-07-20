@@ -1,9 +1,12 @@
 import Home from "@/views/home";
+import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
 
 export default function HomePage() {
   return (
-    <div>
-      <Home />
-    </div>
+    <ProtectedRoute requireAuth={true}>
+      <div>
+        <Home />
+      </div>
+    </ProtectedRoute>
   );
 }

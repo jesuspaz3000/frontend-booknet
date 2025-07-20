@@ -1,9 +1,12 @@
 import Register from '@/views/register';
+import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
 
-export default function LoginPage() {
+export default function RegisterPage() {
     return (
-        <div>
-            <Register />
-        </div>
+        <ProtectedRoute requireAuth={false}>
+            <div>
+                <Register />
+            </div>
+        </ProtectedRoute>
     );
 }

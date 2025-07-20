@@ -6,12 +6,22 @@ import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import Image from 'next/image';
 import { Box, Button, Collapse } from '@mui/material';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import { useAuth } from '../../../contexts/AuthContext';
 
 export default function NavBar() {
     const [expanded, setExpanded] = useState(false);
     const [searchExpanded, setSearchExpanded] = useState(false);
     const [isMenuLocked, setIsMenuLocked] = useState(false);
+    const [isLoggingOut, setIsLoggingOut] = useState(false);
+    
+    const { user, logout: authLogout } = useAuth();
+    
+    // Derivar estados del contexto de autenticación
+    const username = user?.username || 'Usuario';
+    const canManageUsers = user?.role === 'ADMIN';
+
+    // Ya no necesitamos useEffect porque el AuthContext maneja la verificación
+    // useEffect removido
 
     const handleMouseEnter = () => {
         if (!isMenuLocked) {
@@ -43,10 +53,25 @@ export default function NavBar() {
         setSearchExpanded(false);
     };
 
-    // Manejar tecla Escape para cerrar búsqueda
     const handleKeyDown = (event: React.KeyboardEvent) => {
         if (event.key === 'Escape') {
             handleSearchClose();
+        }
+    };
+
+    const handleLogout = async () => {
+        if (isLoggingOut) return; // Prevenir múltiples llamadas simultáneas
+        
+        setIsLoggingOut(true);
+        
+        try {
+            // Usar el logout del AuthContext
+            await authLogout();
+        } catch (error) {
+            console.error('Error al cerrar sesión:', error);
+            // En caso de error, el AuthContext maneja la limpieza
+        } finally {
+            setIsLoggingOut(false);
         }
     };
 
@@ -55,7 +80,7 @@ export default function NavBar() {
             <div className="tw:absolute tw:z-10 tw:bg-black tw:opacity-50 tw:w-full tw:h-full"></div>
             <div className="tw:px-16 tw:flex tw:justify-between tw:items-center tw:w-full">
                 <div className="tw:z-50 tw:cursor-pointer">
-                    <Link href="/">
+                    <Link href="/home">
                         <Image
                             src="/images/BookNetLogo.png"
                             width={150}
@@ -113,54 +138,7 @@ export default function NavBar() {
                             />
                         </Button>
 
-                        {/* Versión expandida que aparece por encima */}
-                        {expanded && (
-                            <Box
-                                sx={{
-                                    position: 'absolute',
-                                    top: 0,
-                                    right: 0,
-                                    zIndex: 55,
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: 1,
-                                    padding: '8px 12px',
-                                    borderRadius: '4px',
-                                    backgroundColor: 'rgba(0,0,0,0.8)',
-                                    color: 'white',
-                                    minWidth: '250px',
-                                    height: '48px',
-                                    justifyContent: 'flex-start',
-                                    backdropFilter: 'blur(10px)',
-                                    boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
-                                    animation: 'slideIn 0.3s ease-out',
-                                    '@keyframes slideIn': {
-                                        from: {
-                                            width: '48px',
-                                            opacity: 0.7,
-                                        },
-                                        to: {
-                                            width: '250px',
-                                            opacity: 1,
-                                        }
-                                    }
-                                }}
-                            >
-                                <Image
-                                    src="/images/perfil.jpeg"
-                                    width={32}
-                                    height={32}
-                                    alt='perfil'
-                                    className='tw:rounded-full'
-                                />
-                                <span style={{ fontSize: '14px', fontWeight: 500, whiteSpace: 'nowrap' }}>
-                                    User
-                                </span>
-                                <ExpandLessIcon sx={{ marginLeft: 'auto' }} />
-                            </Box>
-                        )}
-
-                        {/* Menú desplegable */}
+                        {/* Menú desplegable unificado */}
                         <Collapse in={expanded} timeout={200}>
                             <Box
                                 sx={{
@@ -169,35 +147,67 @@ export default function NavBar() {
                                     right: 0,
                                     backgroundColor: 'rgba(0,0,0,0.9)',
                                     backdropFilter: 'blur(10px)',
-                                    borderRadius: '4px',
+                                    borderRadius: '8px',
                                     minWidth: '250px',
-                                    padding: '12px 0',
-                                    marginTop: '4px',
                                     boxShadow: '0 4px 12px rgba(0,0,0,0.5)',
                                     zIndex: 54,
-                                    '&::before': {
-                                        content: '""',
-                                        position: 'absolute',
-                                        top: '-4px',
-                                        right: '0',
-                                        width: '100%',
-                                        height: '4px',
-                                        backgroundColor: 'transparent',
-                                    }
+                                    overflow: 'hidden',
+                                    marginTop: '8px',
                                 }}
                             >
-                                <Box sx={{ padding: '0 8px' }}>
-                                    <Box
-                                        sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
-                                        onClick={handleMenuItemClick}
-                                    >
-                                        <Link
-                                            style={{ color: 'white', fontSize: '20px', textDecoration: 'none', display: 'block', width: '100%' }}
-                                            href="/userManagement"
-                                        >
-                                            Gestionar Usuarios
-                                        </Link>
+                                {/* Header del menú con información del usuario */}
+                                <Box
+                                    sx={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: 1.5,
+                                        padding: '16px',
+                                        backgroundColor: 'rgba(255,255,255,0.05)',
+                                        borderBottom: '1px solid rgba(255,255,255,0.1)',
+                                    }}
+                                >
+                                    <Image
+                                        src="/images/perfil.jpeg"
+                                        width={40}
+                                        height={40}
+                                        alt='perfil'
+                                        className='tw:rounded-full'
+                                    />
+                                    <Box>
+                                        <span style={{ 
+                                            color: 'white', 
+                                            fontSize: '16px', 
+                                            fontWeight: 600, 
+                                            display: 'block',
+                                            lineHeight: '1.2'
+                                        }}>
+                                            {username}
+                                        </span>
+                                        <span style={{ 
+                                            color: 'rgba(255,255,255,0.7)', 
+                                            fontSize: '12px',
+                                            display: 'block'
+                                        }}>
+                                            Usuario activo
+                                        </span>
                                     </Box>
+                                </Box>
+                                
+                                {/* Opciones del menú */}
+                                <Box sx={{ padding: '8px 0' }}>
+                                    {canManageUsers && (
+                                        <Box
+                                            sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
+                                            onClick={handleMenuItemClick}
+                                        >
+                                            <Link
+                                                style={{ color: 'white', fontSize: '20px', textDecoration: 'none', display: 'block', width: '100%' }}
+                                                href="/userManagement"
+                                            >
+                                                Gestionar Usuarios
+                                            </Link>
+                                        </Box>
+                                    )}
                                     <Box
                                         sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
                                         onClick={handleMenuItemClick}
@@ -223,10 +233,23 @@ export default function NavBar() {
 
                                     <Box sx={{ borderTop: '1px solid rgba(255,255,255,0.1)', marginTop: '12px', paddingTop: '12px' }}>
                                         <Box
-                                            sx={{ padding: '8px 12px', cursor: 'pointer', borderRadius: '4px', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
-                                            onClick={handleMenuItemClick}
+                                            sx={{ 
+                                                padding: '8px 12px', 
+                                                cursor: isLoggingOut ? 'not-allowed' : 'pointer', 
+                                                borderRadius: '4px', 
+                                                opacity: isLoggingOut ? 0.6 : 1,
+                                                '&:hover': { backgroundColor: isLoggingOut ? 'transparent' : 'rgba(255,255,255,0.1)' } 
+                                            }}
+                                            onClick={() => {
+                                                if (!isLoggingOut) {
+                                                    handleMenuItemClick();
+                                                    handleLogout();
+                                                }
+                                            }}
                                         >
-                                            <span style={{ color: 'white', fontSize: '20px' }}>Cerrar sesión</span>
+                                            <span style={{ color: 'white', fontSize: '20px' }}>
+                                                {isLoggingOut ? 'Cerrando sesión...' : 'Cerrar sesión'}
+                                            </span>
                                         </Box>
                                     </Box>
                                 </Box>

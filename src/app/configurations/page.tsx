@@ -1,5 +1,10 @@
 import Configurations from "@/views/configurations";
+import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
 
 export default function ConfigurationsPage() {
-    return <Configurations />;
+    return (
+        <ProtectedRoute requireAuth={true}>
+            <Configurations />
+        </ProtectedRoute>
+    );
 }

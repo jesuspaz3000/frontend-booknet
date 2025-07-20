@@ -12,68 +12,111 @@ import {
     FormControl,
     InputLabel,
     Select,
-    MenuItem
+    MenuItem,
+    CircularProgress,
+    Alert
 } from '@mui/material';
+import userManagementService from '@/services/userManagement/userManagement.service';
 
 interface UserFormData {
-    name: string;
+    username: string;
     email: string;
-    image: string;
     password: string;
     confirmPassword: string;
-    role: 'user' | 'admin';
+    role: 'USER' | 'ADMIN';
 }
 
 interface AddUserProps {
     open: boolean;
     onClose: () => void;
-    onSave: (userData: UserFormData) => void;
+    onUserAdded: () => void; // Callback para recargar la lista
 }
 
-export default function AddUser({ open, onClose, onSave }: AddUserProps) {
+export default function AddUser({ open, onClose, onUserAdded }: AddUserProps) {
     const [formData, setFormData] = useState<UserFormData>({
-        name: '',
+        username: '',
         email: '',
-        image: '/images/users/carameme.jpg',
         password: '',
         confirmPassword: '',
-        role: 'user'
+        role: 'USER'
     });
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
-    const handleSave = () => {
-        // Validación de contraseñas
-        if (formData.password !== formData.confirmPassword) {
-            alert('Las contraseñas no coinciden');
+    const handleSave = async () => {
+        setError(null);
+        
+        // Validaciones
+        if (!formData.username.trim()) {
+            setError('El nombre de usuario es requerido');
+            return;
+        }
+        
+        if (!formData.email.trim()) {
+            setError('El email es requerido');
+            return;
+        }
+        
+        // Validación de email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            setError('Por favor ingresa un email válido');
+            return;
+        }
+        
+        if (!formData.password) {
+            setError('La contraseña es requerida');
             return;
         }
         
         if (formData.password.length < 6) {
-            alert('La contraseña debe tener al menos 6 caracteres');
+            setError('La contraseña debe tener al menos 6 caracteres');
+            return;
+        }
+        
+        if (formData.password !== formData.confirmPassword) {
+            setError('Las contraseñas no coinciden');
             return;
         }
 
-        onSave(formData);
-        // Resetear formulario
-        setFormData({
-            name: '',
-            email: '',
-            image: '/images/users/carameme.jpg',
-            password: '',
-            confirmPassword: '',
-            role: 'user'
-        });
+        setLoading(true);
+        
+        try {
+            await userManagementService.createUser({
+                username: formData.username,
+                email: formData.email,
+                password: formData.password,
+                role: formData.role
+            });
+            
+            // Limpiar el formulario
+            setFormData({
+                username: '',
+                email: '',
+                password: '',
+                confirmPassword: '',
+                role: 'USER'
+            });
+            
+            // Cerrar el modal y recargar la lista
+            onClose();
+            onUserAdded();
+        } catch (err) {
+            setError(err instanceof Error ? err.message : 'Error al crear el usuario');
+        } finally {
+            setLoading(false);
+        }
     };
 
     const handleClose = () => {
         onClose();
         // Resetear formulario al cerrar
         setFormData({
-            name: '',
+            username: '',
             email: '',
-            image: '/images/users/carameme.jpg',
             password: '',
             confirmPassword: '',
-            role: 'user'
+            role: 'USER'
         });
     };
 
@@ -81,7 +124,7 @@ export default function AddUser({ open, onClose, onSave }: AddUserProps) {
         <Dialog 
             open={open} 
             onClose={handleClose}
-            maxWidth="md"
+            maxWidth="sm"
             fullWidth
             PaperProps={{
                 sx: {
@@ -94,13 +137,19 @@ export default function AddUser({ open, onClose, onSave }: AddUserProps) {
                 Nuevo Usuario
             </DialogTitle>
             <DialogContent sx={{ pt: 3 }}>
+                {error && (
+                    <Alert severity="error" sx={{ mb: 2 }}>
+                        {error}
+                    </Alert>
+                )}
                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, marginTop: 2 }}>
                     <TextField
-                        label="Nombre"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        label="Nombre de Usuario"
+                        value={formData.username}
+                        onChange={(e) => setFormData({ ...formData, username: e.target.value })}
                         fullWidth
                         autoComplete="off"
+                        disabled={loading}
                         sx={{
                             '& .MuiOutlinedInput-root': {
                                 color: 'white',
@@ -117,6 +166,7 @@ export default function AddUser({ open, onClose, onSave }: AddUserProps) {
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         fullWidth
                         autoComplete="off"
+                        disabled={loading}
                         sx={{
                             '& .MuiOutlinedInput-root': {
                                 color: 'white',
@@ -135,6 +185,7 @@ export default function AddUser({ open, onClose, onSave }: AddUserProps) {
                         onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                         fullWidth
                         autoComplete="new-password"
+                        disabled={loading}
                         sx={{
                             '& .MuiOutlinedInput-root': {
                                 color: 'white',
@@ -153,6 +204,7 @@ export default function AddUser({ open, onClose, onSave }: AddUserProps) {
                         onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
                         fullWidth
                         autoComplete="new-password"
+                        disabled={loading}
                         error={formData.password !== formData.confirmPassword && formData.confirmPassword !== ''}
                         helperText={formData.password !== formData.confirmPassword && formData.confirmPassword !== '' ? 'Las contraseñas no coinciden' : ''}
                         sx={{
@@ -173,7 +225,8 @@ export default function AddUser({ open, onClose, onSave }: AddUserProps) {
                             <Select
                                 value={formData.role}
                                 label="Rol"
-                                onChange={(e) => setFormData({ ...formData, role: e.target.value as 'user' | 'admin' })}
+                                disabled={loading}
+                                onChange={(e) => setFormData({ ...formData, role: e.target.value as 'USER' | 'ADMIN' })}
                                 sx={{
                                     color: 'white',
                                     '& .MuiOutlinedInput-notchedOutline': { borderColor: '#374151' },
@@ -181,8 +234,8 @@ export default function AddUser({ open, onClose, onSave }: AddUserProps) {
                                     '&.Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: '#2563eb' }
                                 }}
                             >
-                                <MenuItem value="user">Usuario</MenuItem>
-                                <MenuItem value="admin">Administrador</MenuItem>
+                                <MenuItem value="USER">Usuario</MenuItem>
+                                <MenuItem value="ADMIN">Administrador</MenuItem>
                             </Select>
                         </FormControl>
                     </Box>
@@ -191,6 +244,7 @@ export default function AddUser({ open, onClose, onSave }: AddUserProps) {
             <DialogActions sx={{ borderTop: '1px solid #374151', pt: 2 }}>
                 <Button 
                     onClick={handleClose}
+                    disabled={loading}
                     sx={{ color: '#d1d5db' }}
                 >
                     Cancelar
@@ -198,12 +252,15 @@ export default function AddUser({ open, onClose, onSave }: AddUserProps) {
                 <Button 
                     onClick={handleSave}
                     variant="contained"
+                    disabled={loading}
+                    startIcon={loading ? <CircularProgress size={20} sx={{ color: 'white' }} /> : null}
                     sx={{
                         backgroundColor: '#2563eb',
-                        '&:hover': { backgroundColor: '#1d4ed8' }
+                        '&:hover': { backgroundColor: '#1d4ed8' },
+                        '&:disabled': { backgroundColor: '#374151' }
                     }}
                 >
-                    Crear Usuario
+                    {loading ? 'Creando...' : 'Crear Usuario'}
                 </Button>
             </DialogActions>
         </Dialog>

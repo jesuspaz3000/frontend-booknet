@@ -52,6 +52,7 @@ export default function Hero() {
                                 width={1500}
                                 height={1000}
                                 className="tw:h-[95vh] tw:object-cover tw:w-auto tw:z-0"
+                                priority={true}
                             />
                             <div className="tw:absolute tw:inset-0 tw:bg-gradient-to-t tw:from-black tw:via-black/20 tw:to-transparent tw:z-10"></div>
                         </SwiperSlide>
