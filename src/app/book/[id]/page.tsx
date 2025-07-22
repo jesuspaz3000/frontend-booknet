@@ -1,12 +1,10 @@
 import BookPageClient from './BookPageClient';
-import { bookList } from "@/constants/books";
 import Navbar from "@/views/home/navbar"
 
-export async function generateStaticParams() {
-    return bookList.map((book) => ({
-        id: book.id,
-    }));
-}
+// Ya no necesitamos generateStaticParams porque permitimos rutas dinámicas
+// export async function generateStaticParams() {
+//     return [];
+// }
 
 export default async function BookPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;

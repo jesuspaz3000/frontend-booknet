@@ -1,0 +1,200 @@
+[
+  {
+    "id": "ficcion",
+    "nombre": "Ficción",
+    "descripcion": "Narrativa imaginaria que incluye novelas, cuentos y relatos que no están basados en hechos reales.",
+    "genero_padre": null
+  },
+  {
+    "id": "no-ficcion",
+    "nombre": "No Ficción",
+    "descripcion": "Obras basadas en hechos reales, incluyendo biografías, ensayos, libros de historia y textos informativos.",
+    "genero_padre": null
+  },
+  {
+    "id": "realismo-magico",
+    "nombre": "Realismo Mágico",
+    "descripcion": "Género literario que combina elementos fantásticos con la realidad cotidiana de manera natural.",
+    "genero_padre": "Ficción"
+  },
+  {
+    "id": "novela-historica",
+    "nombre": "Novela Histórica",
+    "descripcion": "Narrativa ambientada en el pasado, que recrea épocas históricas con rigor documental.",
+    "genero_padre": "Ficción"
+  },
+  {
+    "id": "romance",
+    "nombre": "Romance",
+    "descripcion": "Género centrado en las relaciones amorosas y los sentimientos románticos entre personajes.",
+    "genero_padre": "Ficción"
+  },
+  {
+    "id": "misterio",
+    "nombre": "Misterio",
+    "descripcion": "Narrativa que gira en torno a la resolución de un enigma, crimen o situación inexplicable.",
+    "genero_padre": "Ficción"
+  },
+  {
+    "id": "ciencia-ficcion",
+    "nombre": "Ciencia Ficción",
+    "descripcion": "Género que explora las consecuencias de los avances científicos y tecnológicos en la sociedad.",
+    "genero_padre": "Ficción"
+  },
+  {
+    "id": "fantasia",
+    "nombre": "Fantasía",
+    "descripcion": "Narrativa que incluye elementos sobrenaturales, mágicos o fantásticos como parte integral de la trama.",
+    "genero_padre": "Ficción"
+  },
+  {
+    "id": "terror",
+    "nombre": "Terror",
+    "descripcion": "Género diseñado para crear suspense, miedo y tensión en el lector.",
+    "genero_padre": "Ficción"
+  },
+  {
+    "id": "drama",
+    "nombre": "Drama",
+    "descripcion": "Narrativa que se centra en conflictos emocionales y situaciones intensas de los personajes.",
+    "genero_padre": "Ficción"
+  },
+  {
+    "id": "biografia",
+    "nombre": "Biografía",
+    "descripcion": "Relato de la vida de una persona real, escrito por otra persona.",
+    "genero_padre": "No Ficción"
+  },
+  {
+    "id": "autobiografia",
+    "nombre": "Autobiografía",
+    "descripcion": "Relato de la propia vida escrito por la misma persona que la ha vivido.",
+    "genero_padre": "No Ficción"
+  },
+  {
+    "id": "ensayo",
+    "nombre": "Ensayo",
+    "descripcion": "Texto en prosa que analiza, interpreta o evalúa un tema de manera personal y reflexiva.",
+    "genero_padre": "No Ficción"
+  },
+  {
+    "id": "historia",
+    "nombre": "Historia",
+    "descripcion": "Obras que narran y analizan eventos del pasado basándose en fuentes documentales.",
+    "genero_padre": "No Ficción"
+  },
+  {
+    "id": "autoayuda",
+    "nombre": "Autoayuda",
+    "descripcion": "Libros diseñados para ayudar al lector a resolver problemas personales o mejorar aspectos de su vida.",
+    "genero_padre": "No Ficción"
+  },
+  {
+    "id": "poesia",
+    "nombre": "Poesía",
+    "descripcion": "Expresión artística a través del lenguaje que utiliza recursos estilísticos como la métrica, el ritmo y la rima.",
+    "genero_padre": null
+  },
+  {
+    "id": "teatro",
+    "nombre": "Teatro",
+    "descripcion": "Obras escritas para ser representadas, que incluyen diálogos y acotaciones escénicas.",
+    "genero_padre": null
+  },
+  {
+    "id": "juvenil",
+    "nombre": "Juvenil",
+    "descripcion": "Literatura dirigida específicamente a lectores adolescentes, con temáticas apropiadas para su edad.",
+    "genero_padre": null
+  },
+  {
+    "id": "infantil",
+    "nombre": "Infantil",
+    "descripcion": "Literatura creada especialmente para niños, con lenguaje y temáticas adaptadas a su comprensión.",
+    "genero_padre": null
+  },
+  {
+    "id": "cronica",
+    "nombre": "Crónica",
+    "descripcion": "Narrativa periodística que combina información con elementos literarios para contar hechos reales.",
+    "genero_padre": "No Ficción"
+  },
+  {
+    "id": "aventura",
+    "nombre": "Aventura",
+    "descripcion": "Narrativa que se centra en la acción, exploración y situaciones emocionantes con protagonistas que enfrentan desafíos.",
+    "genero_padre": "Ficción"
+  },
+  {
+    "id": "distopia",
+    "nombre": "Distopía",
+    "descripcion": "Subgénero de ciencia ficción que presenta sociedades imaginarias indeseables o aterradoras.",
+    "genero_padre": "Ciencia Ficción"
+  },
+  {
+    "id": "thriller",
+    "nombre": "Thriller",
+    "descripcion": "Género que busca mantener al lector en constante suspenso y tensión a través de la narrativa.",
+    "genero_padre": "Ficción"
+  },
+  {
+    "id": "literatura-africana",
+    "nombre": "Literatura Africana",
+    "descripcion": "Obras literarias que exploran la cultura, historia y experiencias del continente africano.",
+    "genero_padre": null
+  },
+  {
+    "id": "literatura-asiatica",
+    "nombre": "Literatura Asiática",
+    "descripcion": "Narrativa que refleja las tradiciones, filosofías y experiencias de las culturas asiáticas.",
+    "genero_padre": null
+  },
+  {
+    "id": "literatura-anglosajona",
+    "nombre": "Literatura Anglosajona",
+    "descripcion": "Obras literarias en lengua inglesa que abarcan las tradiciones británicas y estadounidenses.",
+    "genero_padre": null
+  },
+  {
+    "id": "saga-familiar",
+    "nombre": "Saga Familiar",
+    "descripcion": "Narrativa que sigue la historia de una familia a través de varias generaciones.",
+    "genero_padre": "Ficción"
+  },
+  {
+    "id": "fantasia-epica",
+    "nombre": "Fantasía Épica",
+    "descripcion": "Subgénero de fantasía que presenta mundos complejos, magia elaborada y conflictos a gran escala.",
+    "genero_padre": "Fantasía"
+  },
+  {
+    "id": "realismo",
+    "nombre": "Realismo",
+    "descripcion": "Movimiento literario que busca representar la realidad de manera objetiva y detallada.",
+    "genero_padre": "Ficción"
+  },
+  {
+    "id": "humor",
+    "nombre": "Humor",
+    "descripcion": "Género que utiliza la comedia, ironía y sátira para entretener y a menudo criticar aspectos de la sociedad.",
+    "genero_padre": null
+  },
+  {
+    "id": "policiaco",
+    "nombre": "Policiaco",
+    "descripcion": "Narrativa centrada en la investigación de crímenes, generalmente desde la perspectiva de detectives o investigadores.",
+    "genero_padre": "Misterio"
+  },
+  {
+    "id": "filosofia",
+    "nombre": "Filosofía",
+    "descripcion": "Textos que exploran cuestiones fundamentales sobre la existencia, conocimiento, valores y razón.",
+    "genero_padre": "No Ficción"
+  },
+  {
+    "id": "memoirs",
+    "nombre": "Memoirs",
+    "descripcion": "Relatos autobiográficos que se centran en experiencias específicas o períodos particulares de la vida del autor.",
+    "genero_padre": "Autobiografía"
+  }
+]

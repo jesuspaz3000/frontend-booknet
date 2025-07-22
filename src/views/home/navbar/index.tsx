@@ -202,9 +202,9 @@ export default function NavBar() {
                                         >
                                             <Link
                                                 style={{ color: 'white', fontSize: '20px', textDecoration: 'none', display: 'block', width: '100%' }}
-                                                href="/userManagement"
+                                                href="/dashboard"
                                             >
-                                                Gestionar Usuarios
+                                                Administrar
                                             </Link>
                                         </Box>
                                     )}

@@ -1,33 +1,133 @@
 'use client';
 
-import { bookList } from "@/constants/books";
-import { authors } from "@/constants/authors";
-import { users } from "@/constants/users";
+import { useState, useEffect } from 'react';
 import Image from "next/image";
 import PersonIcon from '@mui/icons-material/Person';
 import CommunityReviews from './communityReviews';
-import { Rating, IconButton, Typography, Button } from '@mui/material';
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
-import ModeCommentIcon from '@mui/icons-material/ModeComment';
+import RealReviews from './realReviews';
+import { Typography, Button, CircularProgress, Alert } from '@mui/material';
 import { useRouter } from 'next/navigation';
+import bookManagementService, { Book as BookType } from '@/services/dashboard/bookManagement/bookManagement.service';
+import UserRating from '@/components/commons/userRating';
 
 interface Props {
     id: string;
 }
 
+interface Author {
+    id: string;
+    name: string;
+    image?: string;
+    biography?: string;
+}
+
 export default function Book({ id }: Props) {
     const router = useRouter();
-    
-    // Buscar el libro una sola vez
-    const book = bookList.find((book) => book.id === id);
+    const [book, setBook] = useState<BookType | null>(null);
+    const [author, setAuthor] = useState<Author | null>(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+    const [refreshTrigger, setRefreshTrigger] = useState(0);
 
-    // Si no encuentra el libro, mostrar mensaje de error
-    if (!book) {
-        return <div className="tw:text-white">Libro no encontrado</div>;
+    useEffect(() => {
+        const fetchBookData = async () => {
+            try {
+                setLoading(true);
+                setError(null);
+                
+                // Obtener datos del libro específico
+                const bookResponse = await bookManagementService.getBookById(id);
+                
+                if (!bookResponse.success || !bookResponse.data) {
+                    setError('Libro no encontrado');
+                    return;
+                }
+                
+                const foundBook = bookResponse.data;
+                setBook(foundBook);
+                
+                // Si el libro tiene autores, usar el primer autor
+                if (foundBook.authorIds && foundBook.authorIds.length > 0) {
+                    try {
+                        // Si hay información de autores en el objeto
+                        if (foundBook.authors && foundBook.authors.length > 0) {
+                            setAuthor({
+                                id: foundBook.authors[0].id,
+                                name: foundBook.authors[0].nombre,
+                            });
+                        } else {
+                            // Placeholder básico
+                            setAuthor({
+                                id: foundBook.authorIds[0],
+                                name: 'Autor desconocido',
+                            });
+                        }
+                    } catch (authorError) {
+                        console.log('Error obteniendo datos del autor:', authorError);
+                        setAuthor(null);
+                    }
+                }
+                
+            } catch (err) {
+                console.error('Error obteniendo datos del libro:', err);
+                setError('Error al cargar los datos del libro');
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        if (id) {
+            fetchBookData();
+        }
+    }, [id]);
+
+    if (loading) {
+        return (
+            <div className="tw:w-full tw:h-screen tw:flex tw:items-center tw:justify-center">
+                <div className="tw:text-center">
+                    <CircularProgress sx={{ color: 'white', mb: 2 }} />
+                    <Typography variant="h6" sx={{ color: 'white' }}>
+                        Cargando libro...
+                    </Typography>
+                </div>
+            </div>
+        );
     }
 
-    // Buscar el autor por authorId (usando la estructura actualizada)
-    const author = authors.find((author) => author.id === book.authorId);
+    if (error || !book) {
+        return (
+            <div className="tw:w-full tw:h-screen tw:flex tw:items-center tw:justify-center tw:px-4">
+                <Alert 
+                    severity="error" 
+                    sx={{ 
+                        backgroundColor: 'rgba(211, 47, 47, 0.1)',
+                        border: '1px solid rgba(211, 47, 47, 0.3)',
+                        color: 'white',
+                        maxWidth: '500px'
+                    }}
+                >
+                    <Typography variant="h6" sx={{ mb: 1 }}>
+                        {error || 'Libro no encontrado'}
+                    </Typography>
+                    <Typography variant="body2">
+                        El libro que buscas no está disponible o ha sido eliminado.
+                    </Typography>
+                    <Button 
+                        variant="outlined" 
+                        sx={{ 
+                            mt: 2, 
+                            color: 'white', 
+                            borderColor: 'white',
+                            '&:hover': { borderColor: '#ccc', backgroundColor: 'rgba(255,255,255,0.1)' }
+                        }}
+                        onClick={() => router.push('/home')}
+                    >
+                        Volver al inicio
+                    </Button>
+                </Alert>
+            </div>
+        );
+    }
 
     // Función para navegar al contenido del libro
     const handleReadBook = () => {
@@ -39,8 +139,8 @@ export default function Book({ id }: Props) {
             <div className="tw:w-full tw:h-screen tw:px-16 tw:pt-48 tw:gap-10">
                 <div className="tw:flex tw:flex-col tw:items-center tw:justify-center tw:fixed tw:h-[40rem] tw:w-[28rem] tw:mt-14">
                     <Image
-                        src={book.image}
-                        alt={book.name}
+                        src={book.coverImage || '/images/placeholder-book.jpg'}
+                        alt={book.title}
                         width={1500}
                         height={1000}
                         className="tw:h-[45rem] tw:object-cover tw:w-auto tw:z-25"
@@ -60,16 +160,25 @@ export default function Book({ id }: Props) {
                             Leer libro
                         </Button>
                     </div>
+                    
+                    {/* Sección de Rating del Usuario */}
+                    <div className="tw:flex tw:flex-col tw:items-center tw:justify-center tw:mt-6 tw:w-full tw:p-4 tw:bg-gray-800/30 tw:rounded-lg tw:border tw:border-gray-700/50">
+                        <h4 className="tw:text-lg tw:font-medium tw:text-white tw:mb-3 tw:text-center">¿Qué te parece?</h4>
+                        <UserRating 
+                            bookId={book.id} 
+                            onRatingUpdate={() => setRefreshTrigger(prev => prev + 1)}
+                        />
+                    </div>
                 </div>
                 <div className="tw:flex tw:flex-col tw:pl-[30rem]">
                     <div className="tw:flex tw:flex-col tw:items-start tw:justify-center tw:mb-8">
-                        <h1 className="tw:text-4xl tw:font-bold tw:mb-4 tw:text-white">{book.name}</h1>
+                        <h1 className="tw:text-4xl tw:font-bold tw:mb-4 tw:text-white">{book.title}</h1>
                         <h2 className="tw:text-2xl tw:font-semibold tw:mb-2 tw:text-gray-300">
                             {author?.name || "Autor desconocido"}
                         </h2>
-                        <p className="tw:text-base tw:text-gray-300">{book.resume}</p>
+                        <p className="tw:text-base tw:text-gray-300">{book.description}</p>
                         <p className="tw:mt-4 tw:text-gray-300">
-                            <strong className="tw:text-white">Género:</strong> {book.genre.length > 0 ? book.genre.join(", ") : "Sin géneros"}
+                            <strong className="tw:text-white">Género:</strong> {book.genres && book.genres.length > 0 ? book.genres.map(g => g.nombre).join(", ") : "Sin géneros"}
                         </p>
                     </div>
                     <hr className="tw:border-gray-600" />
@@ -100,81 +209,31 @@ export default function Book({ id }: Props) {
                                     {author?.name || "Información del autor no disponible"}
                                 </p>
                                 <p className="tw:text-base tw:text-gray-400">
-                                    {author?.totalBooks ? `${author.totalBooks} libro(s)` : "Sin libros"}
+                                    Autor
                                 </p>
                             </div>
                         </div>
                         <p className="tw:mt-2 tw:text-gray-300">
-                            {author?.about || "No hay información disponible sobre el autor."}
+                            {author?.biography || "No hay información disponible sobre el autor."}
                         </p>
                     </div>
                     <hr className="tw:border-gray-600" />
 
-                    {/* Reemplaza la sección anterior con el nuevo componente */}
+                    {/* Estadísticas de la comunidad */}
                     <CommunityReviews
-                        averageRating={book.calification || 0}
-                        totalRatings={9820}
-                        totalReviews={1208}
+                        bookId={book.id}
+                        averageRating={book.averageRating || 0}
+                        totalRatings={book.totalRatings || 0}
+                        refreshTrigger={refreshTrigger}
                     />
 
                     <hr className="tw:my-8 tw:border-gray-600" />
 
-                    {users.map((user) => (
-                        <div key={user.id} className="tw:flex tw:gap-4 tw:mb-6 tw:w-full">
-                            <div className="tw:flex tw:flex-col tw:items-center tw:justify-center tw:w-[100px]">
-                                <Image
-                                    src={user.image}
-                                    alt={user.name}
-                                    width={80}
-                                    height={80}
-                                    className="tw:rounded-full tw:object-cover tw:w-[80px] tw:h-[80px]"
-                                />
-                                <p className="tw:text-sm tw:text-gray-300 tw:mt-2 tw:text-center">{user.name}</p>
-                            </div>
-                            <div className="tw:flex tw:flex-col tw:w-full">
-                                <div className="tw:flex tw:items-center tw:justify-between tw:mb-3">
-                                    <Rating
-                                        name={`user-rating-${user.id}`}
-                                        value={user.calification}
-                                        precision={0.1}
-                                        readOnly
-                                        sx={{
-                                            '& .MuiRating-iconFilled': {
-                                                color: '#fbbf24'
-                                            },
-                                            '& .MuiRating-iconEmpty': {
-                                                color: '#374151'
-                                            }
-                                        }}
-                                    />
-                                    <p className="tw:text-sm tw:text-gray-400">{user.date}</p>
-                                </div>
-                                <p className="tw:text-gray-300 tw:mb-3">{user.comment}</p>
-                                <div className="tw:flex tw:items-center tw:gap-4 tw:mt-2">
-                                    <IconButton sx={{ 
-                                        display: "flex", 
-                                        alignItems: "center", 
-                                        gap: 1,
-                                        color: '#9ca3af',
-                                        '&:hover': { color: '#60a5fa' }
-                                    }}>
-                                        <ThumbUpIcon sx={{ fontSize: 18 }} />
-                                        <Typography sx={{ fontSize: '0.875rem' }}>Me gusta</Typography>
-                                    </IconButton>
-                                    <IconButton sx={{ 
-                                        display: "flex", 
-                                        alignItems: "center", 
-                                        gap: 1,
-                                        color: '#9ca3af',
-                                        '&:hover': { color: '#60a5fa' }
-                                    }}>
-                                        <ModeCommentIcon sx={{ fontSize: 18 }} />
-                                        <Typography sx={{ fontSize: '0.875rem' }}>Comentar</Typography>
-                                    </IconButton>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+                    {/* Reseñas reales de otros usuarios */}
+                    <RealReviews 
+                        bookId={book.id}
+                        refreshTrigger={refreshTrigger}
+                    />
                 </div>
             </div>
         </div>

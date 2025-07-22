@@ -1,0 +1,447 @@
+[
+  {
+    "id": "bestseller",
+    "nombre": "Bestseller",
+    "categoria": "Popularidad"
+  },
+  {
+    "id": "premio-nobel",
+    "nombre": "Premio Nobel",
+    "categoria": "Premios"
+  },
+  {
+    "id": "clasico",
+    "nombre": "Clásico",
+    "categoria": "Clasificación"
+  },
+  {
+    "id": "contemporaneo",
+    "nombre": "Contemporáneo",
+    "categoria": "Época"
+  },
+  {
+    "id": "siglo-xx",
+    "nombre": "Siglo XX",
+    "categoria": "Época"
+  },
+  {
+    "id": "siglo-xxi",
+    "nombre": "Siglo XXI",
+    "categoria": "Época"
+  },
+  {
+    "id": "literatura-latinoamericana",
+    "nombre": "Literatura Latinoamericana",
+    "categoria": "Región"
+  },
+  {
+    "id": "literatura-espanola",
+    "nombre": "Literatura Española",
+    "categoria": "Región"
+  },
+  {
+    "id": "literatura-universal",
+    "nombre": "Literatura Universal",
+    "categoria": "Región"
+  },
+  {
+    "id": "adaptado-al-cine",
+    "nombre": "Adaptado al Cine",
+    "categoria": "Adaptaciones"
+  },
+  {
+    "id": "serie-de-tv",
+    "nombre": "Serie de TV",
+    "categoria": "Adaptaciones"
+  },
+  {
+    "id": "obra-de-teatro",
+    "nombre": "Obra de Teatro",
+    "categoria": "Adaptaciones"
+  },
+  {
+    "id": "primera-novela",
+    "nombre": "Primera Novela",
+    "categoria": "Autor"
+  },
+  {
+    "id": "obra-postuma",
+    "nombre": "Obra Póstuma",
+    "categoria": "Autor"
+  },
+  {
+    "id": "lectura-obligatoria",
+    "nombre": "Lectura Obligatoria",
+    "categoria": "Educativo"
+  },
+  {
+    "id": "libro-de-texto",
+    "nombre": "Libro de Texto",
+    "categoria": "Educativo"
+  },
+  {
+    "id": "filosofia",
+    "nombre": "Filosofía",
+    "categoria": "Temática"
+  },
+  {
+    "id": "politica",
+    "nombre": "Política",
+    "categoria": "Temática"
+  },
+  {
+    "id": "amor",
+    "nombre": "Amor",
+    "categoria": "Temática"
+  },
+  {
+    "id": "familia",
+    "nombre": "Familia",
+    "categoria": "Temática"
+  },
+  {
+    "id": "guerra",
+    "nombre": "Guerra",
+    "categoria": "Temática"
+  },
+  {
+    "id": "revolucion",
+    "nombre": "Revolución",
+    "categoria": "Temática"
+  },
+  {
+    "id": "identidad",
+    "nombre": "Identidad",
+    "categoria": "Temática"
+  },
+  {
+    "id": "migracion",
+    "nombre": "Migración",
+    "categoria": "Temática"
+  },
+  {
+    "id": "feminismo",
+    "nombre": "Feminismo",
+    "categoria": "Temática"
+  },
+  {
+    "id": "dictadura",
+    "nombre": "Dictadura",
+    "categoria": "Temática"
+  },
+  {
+    "id": "exilio",
+    "nombre": "Exilio",
+    "categoria": "Temática"
+  },
+  {
+    "id": "memoria-historica",
+    "nombre": "Memoria Histórica",
+    "categoria": "Temática"
+  },
+  {
+    "id": "violencia",
+    "nombre": "Violencia",
+    "categoria": "Temática"
+  },
+  {
+    "id": "soledad",
+    "nombre": "Soledad",
+    "categoria": "Temática"
+  },
+  {
+    "id": "ilustrado",
+    "nombre": "Ilustrado",
+    "categoria": "Formato"
+  },
+  {
+    "id": "edicion-especial",
+    "nombre": "Edición Especial",
+    "categoria": "Formato"
+  },
+  {
+    "id": "tapa-dura",
+    "nombre": "Tapa Dura",
+    "categoria": "Formato"
+  },
+  {
+    "id": "bolsillo",
+    "nombre": "Bolsillo",
+    "categoria": "Formato"
+  },
+  {
+    "id": "digital",
+    "nombre": "Digital",
+    "categoria": "Formato"
+  },
+  {
+    "id": "audiolibro",
+    "nombre": "Audiolibro",
+    "categoria": "Formato"
+  },
+  {
+    "id": "traducido",
+    "nombre": "Traducido",
+    "categoria": "Idioma"
+  },
+  {
+    "id": "idioma-original",
+    "nombre": "Idioma Original",
+    "categoria": "Idioma"
+  },
+  {
+    "id": "multilingue",
+    "nombre": "Multilingüe",
+    "categoria": "Idioma"
+  },
+  {
+    "id": "lectura-rapida",
+    "nombre": "Lectura Rápida",
+    "categoria": "Dificultad"
+  },
+  {
+    "id": "lectura-profunda",
+    "nombre": "Lectura Profunda",
+    "categoria": "Dificultad"
+  },
+  {
+    "id": "para-principiantes",
+    "nombre": "Para Principiantes",
+    "categoria": "Dificultad"
+  },
+  {
+    "id": "nivel-avanzado",
+    "nombre": "Nivel Avanzado",
+    "categoria": "Dificultad"
+  },
+  {
+    "id": "recomendado-por-criticos",
+    "nombre": "Recomendado por Críticos",
+    "categoria": "Recomendaciones"
+  },
+  {
+    "id": "favorito-del-publico",
+    "nombre": "Favorito del Público",
+    "categoria": "Recomendaciones"
+  },
+  {
+    "id": "imprescindible",
+    "nombre": "Imprescindible",
+    "categoria": "Recomendaciones"
+  },
+  {
+    "id": "saga",
+    "nombre": "Saga",
+    "categoria": "Serie"
+  },
+  {
+    "id": "trilogia",
+    "nombre": "Trilogía",
+    "categoria": "Serie"
+  },
+  {
+    "id": "serie-completa",
+    "nombre": "Serie Completa",
+    "categoria": "Serie"
+  },
+  {
+    "id": "primer-libro",
+    "nombre": "Primer Libro",
+    "categoria": "Serie"
+  },
+  {
+    "id": "ultimo-libro",
+    "nombre": "Último Libro",
+    "categoria": "Serie"
+  },
+  {
+    "id": "lanzamiento-2024",
+    "nombre": "Lanzamiento 2024",
+    "categoria": "Novedad"
+  },
+  {
+    "id": "proximo-estreno",
+    "nombre": "Próximo Estreno",
+    "categoria": "Novedad"
+  },
+  {
+    "id": "recien-publicado",
+    "nombre": "Recién Publicado",
+    "categoria": "Novedad"
+  },
+  {
+    "id": "pre-orden",
+    "nombre": "Pre-orden",
+    "categoria": "Novedad"
+  },
+  {
+    "id": "literatura-japonesa",
+    "nombre": "Literatura Japonesa",
+    "categoria": "Región"
+  },
+  {
+    "id": "literatura-africana",
+    "nombre": "Literatura Africana",
+    "categoria": "Región"
+  },
+  {
+    "id": "literatura-britanica",
+    "nombre": "Literatura Británica",
+    "categoria": "Región"
+  },
+  {
+    "id": "literatura-estadounidense",
+    "nombre": "Literatura Estadounidense",
+    "categoria": "Región"
+  },
+  {
+    "id": "literatura-nordica",
+    "nombre": "Literatura Nórdica",
+    "categoria": "Región"
+  },
+  {
+    "id": "magia",
+    "nombre": "Magia",
+    "categoria": "Temática"
+  },
+  {
+    "id": "dragones",
+    "nombre": "Dragones",
+    "categoria": "Temática"
+  },
+  {
+    "id": "vampiros",
+    "nombre": "Vampiros",
+    "categoria": "Temática"
+  },
+  {
+    "id": "robots",
+    "nombre": "Robots",
+    "categoria": "Temática"
+  },
+  {
+    "id": "viajes-en-el-tiempo",
+    "nombre": "Viajes en el Tiempo",
+    "categoria": "Temática"
+  },
+  {
+    "id": "distopia",
+    "nombre": "Distopía",
+    "categoria": "Temática"
+  },
+  {
+    "id": "utopia",
+    "nombre": "Utopía",
+    "categoria": "Temática"
+  },
+  {
+    "id": "detectives",
+    "nombre": "Detectives",
+    "categoria": "Temática"
+  },
+  {
+    "id": "crimen",
+    "nombre": "Crimen",
+    "categoria": "Temática"
+  },
+  {
+    "id": "aventura",
+    "nombre": "Aventura",
+    "categoria": "Temática"
+  },
+  {
+    "id": "amistad",
+    "nombre": "Amistad",
+    "categoria": "Temática"
+  },
+  {
+    "id": "crecimiento-personal",
+    "nombre": "Crecimiento Personal",
+    "categoria": "Temática"
+  },
+  {
+    "id": "escuela",
+    "nombre": "Escuela",
+    "categoria": "Temática"
+  },
+  {
+    "id": "animales",
+    "nombre": "Animales",
+    "categoria": "Temática"
+  },
+  {
+    "id": "humor-negro",
+    "nombre": "Humor Negro",
+    "categoria": "Temática"
+  },
+  {
+    "id": "satira",
+    "nombre": "Sátira",
+    "categoria": "Temática"
+  },
+  {
+    "id": "epico",
+    "nombre": "Épico",
+    "categoria": "Estilo"
+  },
+  {
+    "id": "intimista",
+    "nombre": "Intimista",
+    "categoria": "Estilo"
+  },
+  {
+    "id": "experimental",
+    "nombre": "Experimental",
+    "categoria": "Estilo"
+  },
+  {
+    "id": "narrativa-multiple",
+    "nombre": "Narrativa Múltiple",
+    "categoria": "Estilo"
+  },
+  {
+    "id": "monologo-interior",
+    "nombre": "Monólogo Interior",
+    "categoria": "Estilo"
+  },
+  {
+    "id": "lectura-de-verano",
+    "nombre": "Lectura de Verano",
+    "categoria": "Ocasión"
+  },
+  {
+    "id": "club-de-lectura",
+    "nombre": "Club de Lectura",
+    "categoria": "Ocasión"
+  },
+  {
+    "id": "regalo-perfecto",
+    "nombre": "Regalo Perfecto",
+    "categoria": "Ocasión"
+  },
+  {
+    "id": "lectura-nocturna",
+    "nombre": "Lectura Nocturna",
+    "categoria": "Ocasión"
+  },
+  {
+    "id": "trending",
+    "nombre": "Trending",
+    "categoria": "Popularidad"
+  },
+  {
+    "id": "viral",
+    "nombre": "Viral",
+    "categoria": "Popularidad"
+  },
+  {
+    "id": "fenomeno-editorial",
+    "nombre": "Fenómeno Editorial",
+    "categoria": "Popularidad"
+  },
+  {
+    "id": "cult-following",
+    "nombre": "Cult Following",
+    "categoria": "Popularidad"
+  }
+]

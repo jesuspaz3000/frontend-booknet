@@ -1,0 +1,1596 @@
+[
+    {
+        "title": "Cien años de soledad",
+        "isbn": "978-84-376-0494-7",
+        "description": "La obra maestra de Gabriel García Márquez narra la historia de la familia Buendía a lo largo de siete generaciones en el pueblo ficticio de Macondo. Una epopeya que combina lo mítico y lo histórico en una narrativa extraordinaria que definió el realismo mágico.",
+        "publicationYear": 1967,
+        "pageCount": 471,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/91TvVQS7loL.jpg",
+        "ageRating": "16+",
+        "readingDifficulty": "Avanzado",
+        "authors": [
+            {
+                "nombre": "Gabriel García Márquez",
+                "acerca_de": "Escritor colombiano, premio Nobel de Literatura en 1982. Considerado uno de los autores más significativos del siglo XX y uno de los mejores en lengua española. Conocido por popularizar el realismo mágico.",
+                "fechaNacimiento": "1927-03-06",
+                "fechaMuerte": "2014-04-17",
+                "nacionalidad": "Colombiana",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Gabriel_Garc%C3%ADa_M%C3%A1rquez.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Realismo Mágico",
+                "descripcion": "Género literario que combina elementos fantásticos con la realidad cotidiana de manera natural.",
+                "genero_padre": "Ficción"
+            },
+            {
+                "nombre": "Ficción",
+                "descripcion": "Narrativa imaginaria que incluye novelas, cuentos y relatos que no están basados en hechos reales.",
+                "genero_padre": null
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Premio Nobel",
+                "categoria": "Premios"
+            },
+            {
+                "nombre": "Clásico",
+                "categoria": "Clasificación"
+            },
+            {
+                "nombre": "Literatura Latinoamericana",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Siglo XX",
+                "categoria": "Época"
+            },
+            {
+                "nombre": "Bestseller",
+                "categoria": "Popularidad"
+            }
+        ]
+    },
+    {
+        "title": "La casa de los espíritus",
+        "isbn": "978-84-204-8276-8",
+        "description": "Primera novela de Isabel Allende que narra la saga de la familia del Valle y de la Trueba a través de cuatro generaciones de mujeres. Una historia de amor, política y magia que retrata la historia de Chile del siglo XX.",
+        "publicationYear": 1982,
+        "pageCount": 433,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/81QcmzZGEyL.jpg",
+        "ageRating": "16+",
+        "readingDifficulty": "Intermedio",
+        "authors": [
+            {
+                "nombre": "Isabel Allende",
+                "acerca_de": "Escritora chilena-estadounidense. Es considerada la escritora viva de lengua española más leída del mundo. Sus libros han sido traducidos a más de 42 idiomas y han vendido más de 77 millones de ejemplares.",
+                "fechaNacimiento": "1942-08-02",
+                "fechaMuerte": null,
+                "nacionalidad": "Chilena",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Isabel_Allende_-_001.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Realismo Mágico",
+                "descripcion": "Género literario que combina elementos fantásticos con la realidad cotidiana de manera natural.",
+                "genero_padre": "Ficción"
+            },
+            {
+                "nombre": "Ficción",
+                "descripcion": "Narrativa imaginaria que incluye novelas, cuentos y relatos que no están basados en hechos reales.",
+                "genero_padre": null
+            },
+            {
+                "nombre": "Novela Histórica",
+                "descripcion": "Narrativa ambientada en el pasado, que recrea épocas históricas con rigor documental.",
+                "genero_padre": "Ficción"
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Primera Novela",
+                "categoria": "Autor"
+            },
+            {
+                "nombre": "Literatura Latinoamericana",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Adaptado al Cine",
+                "categoria": "Adaptaciones"
+            },
+            {
+                "nombre": "Familia",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Política",
+                "categoria": "Temática"
+            }
+        ]
+    },
+    {
+        "title": "Conversación en La Catedral",
+        "isbn": "978-84-322-0714-5",
+        "description": "Novela fundamental de Mario Vargas Llosa que retrata la dictadura de Manuel Odría en Perú a través de una conversación entre Santiago Zavala y Ambrosio en un bar llamado La Catedral.",
+        "publicationYear": 1969,
+        "pageCount": 728,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/71XQJxvN8bL.jpg",
+        "ageRating": "18+",
+        "readingDifficulty": "Avanzado",
+        "authors": [
+            {
+                "nombre": "Mario Vargas Llosa",
+                "acerca_de": "Escritor peruano. Premio Nobel de Literatura en 2010. Es uno de los exponentes principales del boom latinoamericano junto a García Márquez, Julio Cortázar y Carlos Fuentes.",
+                "fechaNacimiento": "1936-03-28",
+                "fechaMuerte": null,
+                "nacionalidad": "Peruana",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Mario_Vargas_Llosa_2011.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Ficción",
+                "descripcion": "Narrativa imaginaria que incluye novelas, cuentos y relatos que no están basados en hechos reales.",
+                "genero_padre": null
+            },
+            {
+                "nombre": "Novela Histórica",
+                "descripcion": "Narrativa ambientada en el pasado, que recrea épocas históricas con rigor documental.",
+                "genero_padre": "Ficción"
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Premio Nobel",
+                "categoria": "Premios"
+            },
+            {
+                "nombre": "Dictadura",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Política",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Literatura Latinoamericana",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Clásico",
+                "categoria": "Clasificación"
+            }
+        ]
+    },
+    {
+        "title": "Rayuela",
+        "isbn": "978-84-376-0441-1",
+        "description": "Obra experimental de Julio Cortázar que puede leerse de múltiples maneras. La historia de Horacio Oliveira y su búsqueda existencial entre París y Buenos Aires revolucionó la narrativa latinoamericana.",
+        "publicationYear": 1963,
+        "pageCount": 635,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/81XQJxvN8bL.jpg",
+        "ageRating": "18+",
+        "readingDifficulty": "Experto",
+        "authors": [
+            {
+                "nombre": "Julio Cortázar",
+                "acerca_de": "Escritor argentino nacionalizado francés. Considerado uno de los autores más innovadores y originales de su tiempo, maestro del relato corto, la prosa poética y la narración breve en general.",
+                "fechaNacimiento": "1914-08-26",
+                "fechaMuerte": "1984-02-12",
+                "nacionalidad": "Argentina",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Julio_Cort%C3%A1zar.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Ficción",
+                "descripcion": "Narrativa imaginaria que incluye novelas, cuentos y relatos que no están basados en hechos reales.",
+                "genero_padre": null
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Clásico",
+                "categoria": "Clasificación"
+            },
+            {
+                "nombre": "Literatura Latinoamericana",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Contemporáneo",
+                "categoria": "Época"
+            },
+            {
+                "nombre": "Filosofía",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Identidad",
+                "categoria": "Temática"
+            }
+        ]
+    },
+    {
+        "title": "El Aleph",
+        "isbn": "978-84-376-0495-4",
+        "description": "Colección de cuentos de Jorge Luis Borges que incluye algunas de sus obras más famosas como 'El Aleph', 'La escritura del dios' y 'El Zahir'. Relatos que exploran temas como el infinito, el tiempo y la realidad.",
+        "publicationYear": 1949,
+        "pageCount": 203,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/71YQJxvN8bL.jpg",
+        "ageRating": "16+",
+        "readingDifficulty": "Avanzado",
+        "authors": [
+            {
+                "nombre": "Jorge Luis Borges",
+                "acerca_de": "Escritor argentino, uno de los autores más destacados de la literatura del siglo XX. Publicó ensayos breves, cuentos y poemas. Su obra, fundamental en la literatura y en el pensamiento humano, ha sido objeto de minuciosos análisis y de múltiples interpretaciones.",
+                "fechaNacimiento": "1899-08-24",
+                "fechaMuerte": "1986-06-14",
+                "nacionalidad": "Argentina",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Jorge_Luis_Borges_1951.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Ficción",
+                "descripcion": "Narrativa imaginaria que incluye novelas, cuentos y relatos que no están basados en hechos reales.",
+                "genero_padre": null
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Clásico",
+                "categoria": "Clasificación"
+            },
+            {
+                "nombre": "Literatura Universal",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Filosofía",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Siglo XX",
+                "categoria": "Época"
+            },
+            {
+                "nombre": "Imprescindible",
+                "categoria": "Recomendaciones"
+            }
+        ]
+    },
+    {
+        "title": "El laberinto de la soledad",
+        "isbn": "978-968-16-0123-4",
+        "description": "Ensayo fundamental de Octavio Paz que analiza la identidad mexicana y la condición del mexicano moderno. Una reflexión profunda sobre la cultura, la historia y la psicología del pueblo mexicano.",
+        "publicationYear": 1950,
+        "pageCount": 191,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/61YQJxvN8bL.jpg",
+        "ageRating": "16+",
+        "readingDifficulty": "Avanzado",
+        "authors": [
+            {
+                "nombre": "Octavio Paz",
+                "acerca_de": "Poeta, escritor, ensayista y diplomático mexicano, premio Nobel de Literatura en 1990. Se le considera uno de los más grandes escritores del siglo XX y uno de los grandes poetas hispanos de todos los tiempos.",
+                "fechaNacimiento": "1914-03-31",
+                "fechaMuerte": "1998-04-19",
+                "nacionalidad": "Mexicana",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Octavio_Paz_1988.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Ensayo",
+                "descripcion": "Texto en prosa en el cual un autor desarrolla sus ideas sobre un tema determinado con carácter y estilo personales.",
+                "genero_padre": "No Ficción"
+            },
+            {
+                "nombre": "No Ficción",
+                "descripcion": "Obras basadas en hechos reales, incluyendo biografías, ensayos, libros de historia y textos informativos.",
+                "genero_padre": null
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Premio Nobel",
+                "categoria": "Premios"
+            },
+            {
+                "nombre": "Identidad",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Filosofía",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Literatura Latinoamericana",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Clásico",
+                "categoria": "Clasificación"
+            }
+        ]
+    },
+    {
+        "title": "El Alquimista",
+        "isbn": "978-84-08-04479-1",
+        "description": "La historia de Santiago, un joven pastor andaluz que viaja desde España hasta las pirámides de Egipto en busca de un tesoro. Una fábula sobre seguir los sueños y escuchar al corazón.",
+        "publicationYear": 1988,
+        "pageCount": 163,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/51YQJxvN8bL.jpg",
+        "ageRating": "12+",
+        "readingDifficulty": "Fácil",
+        "authors": [
+            {
+                "nombre": "Paulo Coelho",
+                "acerca_de": "Escritor brasileño. Es uno de los escritores más leídos del mundo, con más de 320 millones de libros vendidos en más de 170 países. Sus obras han sido traducidas a 88 idiomas.",
+                "fechaNacimiento": "1947-08-24",
+                "fechaMuerte": null,
+                "nacionalidad": "Brasileña",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/8/87/Paulo_Coelho_nrkbeta.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Ficción",
+                "descripcion": "Narrativa imaginaria que incluye novelas, cuentos y relatos que no están basados en hechos reales.",
+                "genero_padre": null
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Bestseller",
+                "categoria": "Popularidad"
+            },
+            {
+                "nombre": "Filosofía",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Traducido",
+                "categoria": "Idioma"
+            },
+            {
+                "nombre": "Favorito del Público",
+                "categoria": "Recomendaciones"
+            }
+        ]
+    },
+    {
+        "title": "Como agua para chocolate",
+        "isbn": "978-84-397-1843-7",
+        "description": "Novela de Laura Esquivel que combina recetas de cocina con una historia de amor prohibido durante la Revolución Mexicana. Una obra que mezcla realismo mágico con tradiciones culinarias mexicanas.",
+        "publicationYear": 1989,
+        "pageCount": 246,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/41YQJxvN8bL.jpg",
+        "ageRating": "16+",
+        "readingDifficulty": "Intermedio",
+        "authors": [
+            {
+                "nombre": "Laura Esquivel",
+                "acerca_de": "Escritora mexicana. Es conocida por su novela 'Como agua para chocolate', que fue adaptada al cine y se convirtió en un éxito internacional. Sus obras combinan elementos del realismo mágico con la cultura mexicana.",
+                "fechaNacimiento": "1950-09-30",
+                "fechaMuerte": null,
+                "nacionalidad": "Mexicana",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Laura_Esquivel.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Realismo Mágico",
+                "descripcion": "Género literario que combina elementos fantásticos con la realidad cotidiana de manera natural.",
+                "genero_padre": "Ficción"
+            },
+            {
+                "nombre": "Romance",
+                "descripcion": "Género centrado en las relaciones amorosas y los sentimientos románticos entre personajes.",
+                "genero_padre": "Ficción"
+            },
+            {
+                "nombre": "Ficción",
+                "descripcion": "Narrativa imaginaria que incluye novelas, cuentos y relatos que no están basados en hechos reales.",
+                "genero_padre": null
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Adaptado al Cine",
+                "categoria": "Adaptaciones"
+            },
+            {
+                "nombre": "Amor",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Revolución",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Literatura Latinoamericana",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Primera Novela",
+                "categoria": "Autor"
+            }
+        ]
+    },
+    {
+        "title": "Los detectives salvajes",
+        "isbn": "978-84-339-2677-0",
+        "description": "Novela de Roberto Bolaño que sigue las aventuras de los poetas realvisceralistas Arturo Belano y Ulises Lima. Una obra que retrata la vida bohemia y literaria de América Latina.",
+        "publicationYear": 1998,
+        "pageCount": 609,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/31YQJxvN8bL.jpg",
+        "ageRating": "18+",
+        "readingDifficulty": "Avanzado",
+        "authors": [
+            {
+                "nombre": "Roberto Bolaño",
+                "acerca_de": "Escritor chileno. Considerado uno de los escritores más importantes de la literatura latinoamericana contemporánea. Sus obras exploran temas como la literatura, la violencia y la búsqueda artística.",
+                "fechaNacimiento": "1953-04-28",
+                "fechaMuerte": "2003-07-15",
+                "nacionalidad": "Chilena",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Roberto_Bola%C3%B1o.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Ficción",
+                "descripcion": "Narrativa imaginaria que incluye novelas, cuentos y relatos que no están basados en hechos reales.",
+                "genero_padre": null
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Contemporáneo",
+                "categoria": "Época"
+            },
+            {
+                "nombre": "Literatura Latinoamericana",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Recomendado por Críticos",
+                "categoria": "Recomendaciones"
+            },
+            {
+                "nombre": "Siglo XXI",
+                "categoria": "Época"
+            }
+        ]
+    },
+    {
+        "title": "La Sombra del Viento",
+        "isbn": "978-84-08-04740-2",
+        "description": "Primera novela de la tetralogía 'El Cementerio de los Libros Olvidados' de Carlos Ruiz Zafón. Ambientada en la Barcelona de posguerra, narra la historia de Daniel Sempere y su búsqueda del misterioso autor Julián Carax.",
+        "publicationYear": 2001,
+        "pageCount": 565,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/21YQJxvN8bL.jpg",
+        "ageRating": "16+",
+        "readingDifficulty": "Intermedio",
+        "authors": [
+            {
+                "nombre": "Carlos Ruiz Zafón",
+                "acerca_de": "Escritor español. Autor de la saga 'El Cementerio de los Libros Olvidados'. Sus novelas han sido traducidas a más de 50 idiomas y han vendido millones de ejemplares en todo el mundo.",
+                "fechaNacimiento": "1964-09-25",
+                "fechaMuerte": "2020-06-19",
+                "nacionalidad": "Española",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Carlos_Ruiz_Zaf%C3%B3n.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Misterio",
+                "descripcion": "Género que presenta situaciones enigmáticas que requieren investigación y resolución.",
+                "genero_padre": "Ficción"
+            },
+            {
+                "nombre": "Ficción",
+                "descripcion": "Narrativa imaginaria que incluye novelas, cuentos y relatos que no están basados en hechos reales.",
+                "genero_padre": null
+            },
+            {
+                "nombre": "Novela Histórica",
+                "descripcion": "Narrativa ambientada en el pasado, que recrea épocas históricas con rigor documental.",
+                "genero_padre": "Ficción"
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Bestseller",
+                "categoria": "Popularidad"
+            },
+            {
+                "nombre": "Literatura Española",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Siglo XXI",
+                "categoria": "Época"
+            },
+            {
+                "nombre": "Adaptado al Cine",
+                "categoria": "Adaptaciones"
+            },
+            {
+                "nombre": "Favorito del Público",
+                "categoria": "Recomendaciones"
+            }
+        ]
+    },
+    {
+        "title": "Pedro Páramo",
+        "isbn": "978-84-376-0496-1",
+        "description": "Obra maestra de Juan Rulfo que narra la historia de Juan Preciado en su búsqueda de su padre Pedro Páramo en el pueblo fantasma de Comala. Una de las novelas más influyentes de la literatura mexicana.",
+        "publicationYear": 1955,
+        "pageCount": 124,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/11YQJxvN8bL.jpg",
+        "ageRating": "16+",
+        "readingDifficulty": "Avanzado",
+        "authors": [
+            {
+                "nombre": "Juan Rulfo",
+                "acerca_de": "Escritor, guionista y fotógrafo mexicano. Considerado uno de los grandes maestros de la literatura hispanoamericana del siglo XX. Su obra, aunque breve, es fundamental en la literatura universal.",
+                "fechaNacimiento": "1917-05-16",
+                "fechaMuerte": "1986-01-07",
+                "nacionalidad": "Mexicana",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Juan_Rulfo.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Realismo Mágico",
+                "descripcion": "Género literario que combina elementos fantásticos con la realidad cotidiana de manera natural.",
+                "genero_padre": "Ficción"
+            },
+            {
+                "nombre": "Ficción",
+                "descripcion": "Narrativa imaginaria que incluye novelas, cuentos y relatos que no están basados en hechos reales.",
+                "genero_padre": null
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Clásico",
+                "categoria": "Clasificación"
+            },
+            {
+                "nombre": "Literatura Latinoamericana",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Siglo XX",
+                "categoria": "Época"
+            },
+            {
+                "nombre": "Imprescindible",
+                "categoria": "Recomendaciones"
+            },
+            {
+                "nombre": "Lectura Obligatoria",
+                "categoria": "Educativo"
+            }
+        ]
+    },
+    {
+        "title": "Ficciones",
+        "isbn": "978-84-376-0497-8",
+        "description": "Colección de cuentos de Jorge Luis Borges que incluye relatos fundamentales como 'La lotería en Babilonia', 'El jardín de senderos que se bifurcan' y 'Pierre Menard, autor del Quijote'.",
+        "publicationYear": 1944,
+        "pageCount": 174,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/01YQJxvN8bL.jpg",
+        "ageRating": "16+",
+        "readingDifficulty": "Experto",
+        "authors": [
+            {
+                "nombre": "Jorge Luis Borges",
+                "acerca_de": "Escritor argentino, uno de los autores más destacados de la literatura del siglo XX. Publicó ensayos breves, cuentos y poemas. Su obra, fundamental en la literatura y en el pensamiento humano, ha sido objeto de minuciosos análisis y de múltiples interpretaciones.",
+                "fechaNacimiento": "1899-08-24",
+                "fechaMuerte": "1986-06-14",
+                "nacionalidad": "Argentina",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Jorge_Luis_Borges_1951.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Ficción",
+                "descripcion": "Narrativa imaginaria que incluye novelas, cuentos y relatos que no están basados en hechos reales.",
+                "genero_padre": null
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Clásico",
+                "categoria": "Clasificación"
+            },
+            {
+                "nombre": "Literatura Universal",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Filosofía",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Siglo XX",
+                "categoria": "Época"
+            },
+            {
+                "nombre": "Nivel Avanzado",
+                "categoria": "Dificultad"
+            }
+        ]
+    },
+    {
+        "title": "El Hobbit",
+        "isbn": "978-84-450-7903-1",
+        "description": "La historia de Bilbo Bolsón, un hobbit que se embarca en una aventura épica junto a trece enanos y el mago Gandalf para recuperar el tesoro custodiado por el dragón Smaug.",
+        "publicationYear": 1937,
+        "pageCount": 310,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/71YQJxvN8bL.jpg",
+        "ageRating": "12+",
+        "readingDifficulty": "Intermedio",
+        "authors": [
+            {
+                "nombre": "J.R.R. Tolkien",
+                "acerca_de": "Escritor británico, filólogo y profesor universitario. Creador de la Tierra Media y autor de 'El Hobbit' y 'El Señor de los Anillos'. Considerado el padre de la literatura fantástica moderna.",
+                "fechaNacimiento": "1892-01-03",
+                "fechaMuerte": "1973-09-02",
+                "nacionalidad": "Británica",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Tolkien_1916.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Fantasía",
+                "descripcion": "Género que presenta elementos mágicos y sobrenaturales como parte integral de la trama.",
+                "genero_padre": "Ficción"
+            },
+            {
+                "nombre": "Aventura",
+                "descripcion": "Narrativa centrada en viajes, expediciones y situaciones de riesgo y emoción.",
+                "genero_padre": "Ficción"
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Clásico",
+                "categoria": "Clasificación"
+            },
+            {
+                "nombre": "Adaptado al Cine",
+                "categoria": "Adaptaciones"
+            },
+            {
+                "nombre": "Primer Libro",
+                "categoria": "Serie"
+            },
+            {
+                "nombre": "Dragones",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Magia",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Aventura",
+                "categoria": "Temática"
+            }
+        ]
+    },
+    {
+        "title": "El Señor de los Anillos: La Comunidad del Anillo",
+        "isbn": "978-84-450-7904-8",
+        "description": "Primera parte de la épica trilogía de Tolkien. Frodo Bolsón hereda un anillo mágico y debe emprender un peligroso viaje para destruirlo y salvar la Tierra Media.",
+        "publicationYear": 1954,
+        "pageCount": 576,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/81YQJxvN8bL.jpg",
+        "ageRating": "12+",
+        "readingDifficulty": "Avanzado",
+        "authors": [
+            {
+                "nombre": "J.R.R. Tolkien",
+                "acerca_de": "Escritor británico, filólogo y profesor universitario. Creador de la Tierra Media y autor de 'El Hobbit' y 'El Señor de los Anillos'. Considerado el padre de la literatura fantástica moderna.",
+                "fechaNacimiento": "1892-01-03",
+                "fechaMuerte": "1973-09-02",
+                "nacionalidad": "Británica",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Tolkien_1916.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Fantasía Épica",
+                "descripcion": "Subgénero de fantasía que presenta mundos complejos, aventuras a gran escala y temas heroicos.",
+                "genero_padre": "Fantasía"
+            },
+            {
+                "nombre": "Aventura",
+                "descripcion": "Narrativa centrada en viajes, expediciones y situaciones de riesgo y emoción.",
+                "genero_padre": "Ficción"
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Saga",
+                "categoria": "Serie"
+            },
+            {
+                "nombre": "Trilogía",
+                "categoria": "Serie"
+            },
+            {
+                "nombre": "Primer Libro",
+                "categoria": "Serie"
+            },
+            {
+                "nombre": "Adaptado al Cine",
+                "categoria": "Adaptaciones"
+            },
+            {
+                "nombre": "Épico",
+                "categoria": "Estilo"
+            },
+            {
+                "nombre": "Magia",
+                "categoria": "Temática"
+            }
+        ]
+    },
+    {
+        "title": "Asesinato en el Orient Express",
+        "isbn": "978-84-08-04741-9",
+        "description": "El detective Hercule Poirot debe resolver un misterioso asesinato ocurrido en el lujoso Orient Express, donde cada pasajero parece tener motivos para el crimen.",
+        "publicationYear": 1934,
+        "pageCount": 256,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/61YQJxvN8bL.jpg",
+        "ageRating": "16+",
+        "readingDifficulty": "Intermedio",
+        "authors": [
+            {
+                "nombre": "Agatha Christie",
+                "acerca_de": "Escritora británica de novelas de misterio. Es la novelista más publicada de todos los tiempos y la tercera autora más publicada en cualquier género, solo superada por Shakespeare y la Biblia.",
+                "fechaNacimiento": "1890-09-15",
+                "fechaMuerte": "1976-01-12",
+                "nacionalidad": "Británica",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Agatha_Christie.png"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Misterio",
+                "descripcion": "Género que presenta situaciones enigmáticas que requieren investigación y resolución.",
+                "genero_padre": "Ficción"
+            },
+            {
+                "nombre": "Policiaco",
+                "descripcion": "Género centrado en la investigación de crímenes y la resolución de casos por parte de detectives.",
+                "genero_padre": "Misterio"
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Clásico",
+                "categoria": "Clasificación"
+            },
+            {
+                "nombre": "Detectives",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Crimen",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Adaptado al Cine",
+                "categoria": "Adaptaciones"
+            },
+            {
+                "nombre": "Literatura Británica",
+                "categoria": "Región"
+            }
+        ]
+    },
+    {
+        "title": "IT (Eso)",
+        "isbn": "978-84-01-33847-2",
+        "description": "En el pueblo de Derry, un grupo de niños debe enfrentarse a una entidad maligna que adopta la forma de un payaso llamado Pennywise y que despierta cada 27 años para alimentarse del miedo.",
+        "publicationYear": 1986,
+        "pageCount": 1138,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/51YQJxvN8bL.jpg",
+        "ageRating": "18+",
+        "readingDifficulty": "Intermedio",
+        "authors": [
+            {
+                "nombre": "Stephen King",
+                "acerca_de": "Escritor estadounidense de novelas de terror, suspenso, ciencia ficción y fantasía. Ha publicado más de 60 novelas y 200 relatos cortos. Es conocido como el 'Maestro del Terror'.",
+                "fechaNacimiento": "1947-09-21",
+                "fechaMuerte": null,
+                "nacionalidad": "Estadounidense",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Stephen_King%2C_Comicon.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Terror",
+                "descripcion": "Género que busca provocar miedo, ansiedad y suspenso en el lector a través de elementos sobrenaturales o psicológicos.",
+                "genero_padre": "Ficción"
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Adaptado al Cine",
+                "categoria": "Adaptaciones"
+            },
+            {
+                "nombre": "Amistad",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Literatura Estadounidense",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Bestseller",
+                "categoria": "Popularidad"
+            }
+        ]
+    },
+    {
+        "title": "Tokio Blues (Norwegian Wood)",
+        "isbn": "978-84-08-07454-5",
+        "description": "Una melancólica historia de amor ambientada en el Japón de los años 60. Toru Watanabe rememora su juventud universitaria y su relación con dos mujeres muy diferentes.",
+        "publicationYear": 1987,
+        "pageCount": 389,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/41YQJxvN8bL.jpg",
+        "ageRating": "16+",
+        "readingDifficulty": "Intermedio",
+        "authors": [
+            {
+                "nombre": "Haruki Murakami",
+                "acerca_de": "Escritor japonés contemporáneo. Sus libros han sido traducidos a más de 50 idiomas y han vendido millones de copias en todo el mundo. Es conocido por su estilo surrealista y melancólico.",
+                "fechaNacimiento": "1949-01-12",
+                "fechaMuerte": null,
+                "nacionalidad": "Japonesa",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Haruki_Murakami_2018.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Ficción",
+                "descripcion": "Narrativa imaginaria que incluye novelas, cuentos y relatos que no están basados en hechos reales.",
+                "genero_padre": null
+            },
+            {
+                "nombre": "Romance",
+                "descripcion": "Género centrado en las relaciones amorosas y los sentimientos románticos entre personajes.",
+                "genero_padre": "Ficción"
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Literatura Japonesa",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Amor",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Contemporáneo",
+                "categoria": "Época"
+            },
+            {
+                "nombre": "Bestseller",
+                "categoria": "Popularidad"
+            },
+            {
+                "nombre": "Adaptado al Cine",
+                "categoria": "Adaptaciones"
+            }
+        ]
+    },
+    {
+        "title": "La noche de Tlatelolco",
+        "isbn": "978-968-16-0124-1",
+        "description": "Testimonio periodístico sobre la masacre estudiantil del 2 de octubre de 1968 en la Plaza de las Tres Culturas. Una obra fundamental del periodismo narrativo mexicano.",
+        "publicationYear": 1971,
+        "pageCount": 285,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/31YQJxvN8bL.jpg",
+        "ageRating": "16+",
+        "readingDifficulty": "Intermedio",
+        "authors": [
+            {
+                "nombre": "Elena Poniatowska",
+                "acerca_de": "Escritora y periodista mexicana de origen polaco-francés. Es una de las figuras más importantes del periodismo y la literatura mexicana contemporánea. Premio Cervantes 2013.",
+                "fechaNacimiento": "1932-05-19",
+                "fechaMuerte": null,
+                "nacionalidad": "Mexicana",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Elena_Poniatowska.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Crónica",
+                "descripcion": "Género periodístico que combina información con elementos narrativos y literarios.",
+                "genero_padre": "No Ficción"
+            },
+            {
+                "nombre": "No Ficción",
+                "descripcion": "Obras basadas en hechos reales, incluyendo biografías, ensayos, libros de historia y textos informativos.",
+                "genero_padre": null
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Memoria Histórica",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Política",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Literatura Latinoamericana",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Imprescindible",
+                "categoria": "Recomendaciones"
+            }
+        ]
+    },
+    {
+        "title": "Fundación",
+        "isbn": "978-84-01-33848-9",
+        "description": "Primera novela de la saga de la Fundación. En un futuro lejano, el matemático Hari Seldon predice la caída del Imperio Galáctico y establece una fundación para preservar el conocimiento.",
+        "publicationYear": 1951,
+        "pageCount": 244,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/21YQJxvN8bL.jpg",
+        "ageRating": "16+",
+        "readingDifficulty": "Avanzado",
+        "authors": [
+            {
+                "nombre": "Isaac Asimov",
+                "acerca_de": "Escritor y profesor de bioquímica estadounidense de origen ruso. Autor prolífico de obras de ciencia ficción y divulgación científica. Es famoso por sus leyes de la robótica y la saga de la Fundación.",
+                "fechaNacimiento": "1920-01-02",
+                "fechaMuerte": "1992-04-06",
+                "nacionalidad": "Estadounidense",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/3/34/Isaac.Asimov01.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Ciencia Ficción",
+                "descripcion": "Género que presenta situaciones futuristas, tecnología avanzada y exploración de conceptos científicos.",
+                "genero_padre": "Ficción"
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Saga",
+                "categoria": "Serie"
+            },
+            {
+                "nombre": "Primer Libro",
+                "categoria": "Serie"
+            },
+            {
+                "nombre": "Clásico",
+                "categoria": "Clasificación"
+            },
+            {
+                "nombre": "Robots",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Literatura Estadounidense",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Épico",
+                "categoria": "Estilo"
+            }
+        ]
+    },
+    {
+        "title": "Americanah",
+        "isbn": "978-84-397-2844-3",
+        "description": "La historia de Ifemelu, una joven nigeriana que emigra a Estados Unidos para estudiar, y su experiencia navegando entre culturas, raza e identidad.",
+        "publicationYear": 2013,
+        "pageCount": 477,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/11YQJxvN8bL.jpg",
+        "ageRating": "16+",
+        "readingDifficulty": "Intermedio",
+        "authors": [
+            {
+                "nombre": "Chimamanda Ngozi Adichie",
+                "acerca_de": "Escritora nigeriana. Es una de las voces más importantes de la literatura africana contemporánea. Sus obras exploran temas de identidad, raza, género y migración.",
+                "fechaNacimiento": "1977-09-15",
+                "fechaMuerte": null,
+                "nacionalidad": "Nigeriana",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Chimamanda_Ngozi_Adichie_2009.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Ficción",
+                "descripcion": "Narrativa imaginaria que incluye novelas, cuentos y relatos que no están basados en hechos reales.",
+                "genero_padre": null
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Literatura Africana",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Identidad",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Migración",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Contemporáneo",
+                "categoria": "Época"
+            },
+            {
+                "nombre": "Feminismo",
+                "categoria": "Temática"
+            }
+        ]
+    },
+    {
+        "title": "Fahrenheit 451",
+        "isbn": "978-84-01-33849-6",
+        "description": "En una sociedad futura donde los libros están prohibidos, el bombero Guy Montag comienza a cuestionar su trabajo de quemar libros y descubre el poder subversivo de la literatura.",
+        "publicationYear": 1953,
+        "pageCount": 249,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/01YQJxvN8bL.jpg",
+        "ageRating": "16+",
+        "readingDifficulty": "Intermedio",
+        "authors": [
+            {
+                "nombre": "Ray Bradbury",
+                "acerca_de": "Escritor estadounidense de ciencia ficción y fantasía. Es conocido por sus obras distópicas y su estilo poético. Autor de clásicos como 'Fahrenheit 451' y 'Crónicas marcianas'.",
+                "fechaNacimiento": "1920-08-22",
+                "fechaMuerte": "2012-06-05",
+                "nacionalidad": "Estadounidense",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Ray_Bradbury_%281975%29_-cropped-.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Ciencia Ficción",
+                "descripcion": "Género que presenta situaciones futuristas, tecnología avanzada y exploración de conceptos científicos.",
+                "genero_padre": "Ficción"
+            },
+            {
+                "nombre": "Distopía",
+                "descripcion": "Subgénero que presenta sociedades futuras opresivas y deshumanizadas.",
+                "genero_padre": "Ciencia Ficción"
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Clásico",
+                "categoria": "Clasificación"
+            },
+            {
+                "nombre": "Distopía",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Literatura Estadounidense",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Adaptado al Cine",
+                "categoria": "Adaptaciones"
+            },
+            {
+                "nombre": "Imprescindible",
+                "categoria": "Recomendaciones"
+            }
+        ]
+    },
+    {
+        "title": "Charlie y la fábrica de chocolate",
+        "isbn": "978-84-204-8277-5",
+        "description": "Charlie Bucket, un niño pobre, gana un boleto dorado que le permite visitar la misteriosa fábrica de chocolate de Willy Wonka, donde vive aventuras extraordinarias.",
+        "publicationYear": 1964,
+        "pageCount": 176,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/91YQJxvN8bL.jpg",
+        "ageRating": "6+",
+        "readingDifficulty": "Fácil",
+        "authors": [
+            {
+                "nombre": "Roald Dahl",
+                "acerca_de": "Escritor británico de literatura infantil y juvenil. Es uno de los autores de libros infantiles más vendidos del mundo. Sus historias combinan humor negro con fantasía.",
+                "fechaNacimiento": "1916-09-13",
+                "fechaMuerte": "1990-11-23",
+                "nacionalidad": "Británica",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Roald_Dahl.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Infantil",
+                "descripcion": "Literatura dirigida especialmente a niños, con temáticas y lenguaje apropiados para su edad.",
+                "genero_padre": null
+            },
+            {
+                "nombre": "Fantasía",
+                "descripcion": "Género que presenta elementos mágicos, sobrenaturales o imaginarios en mundos ficticios.",
+                "genero_padre": "Ficción"
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Aventuras",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Adaptado al Cine",
+                "categoria": "Adaptaciones"
+            },
+            {
+                "nombre": "Literatura Británica",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Clásico",
+                "categoria": "Clasificación"
+            },
+            {
+                "nombre": "Familia",
+                "categoria": "Temática"
+            }
+        ]
+    },
+    {
+        "title": "Don Quijote de la Mancha",
+        "isbn": "978-84-376-0498-5",
+        "description": "Las aventuras del ingenioso hidalgo Don Quijote y su fiel escudero Sancho Panza. Considerada la primera novela moderna y una de las obras cumbre de la literatura universal.",
+        "publicationYear": 1605,
+        "pageCount": 1023,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/81YQJxvN8bL.jpg",
+        "ageRating": "16+",
+        "readingDifficulty": "Experto",
+        "authors": [
+            {
+                "nombre": "Miguel de Cervantes",
+                "acerca_de": "Novelista, poeta, dramaturgo y soldado español. Es considerado la máxima figura de la literatura española y universalmente conocido por haber escrito Don Quijote de la Mancha.",
+                "fechaNacimiento": "1547-09-29",
+                "fechaMuerte": "1616-04-22",
+                "nacionalidad": "Española",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/0/02/Cervantes_J%C3%A1uregui.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Ficción",
+                "descripcion": "Narrativa imaginaria que incluye novelas, cuentos y relatos que no están basados en hechos reales.",
+                "genero_padre": null
+            },
+            {
+                "nombre": "Aventura",
+                "descripcion": "Género que narra experiencias emocionantes, viajes y situaciones de riesgo o peligro.",
+                "genero_padre": "Ficción"
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Clásico",
+                "categoria": "Clasificación"
+            },
+            {
+                "nombre": "Literatura Española",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Aventura",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Humor",
+                "categoria": "Estilo"
+            },
+            {
+                "nombre": "Imprescindible",
+                "categoria": "Recomendaciones"
+            }
+        ]
+    },
+    {
+        "title": "Beloved",
+        "isbn": "978-84-397-2845-0",
+        "description": "Ambientada después de la Guerra Civil estadounidense, narra la historia de Sethe, una esclava liberada que es atormentada por el fantasma de su hija fallecida.",
+        "publicationYear": 1987,
+        "pageCount": 324,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/71YQJxvN8bL.jpg",
+        "ageRating": "18+",
+        "readingDifficulty": "Avanzado",
+        "authors": [
+            {
+                "nombre": "Toni Morrison",
+                "acerca_de": "Novelista estadounidense. Ganó el Premio Pulitzer de Ficción en 1988 y el Premio Nobel de Literatura en 1993. Sus obras exploran la experiencia afroamericana, especialmente la de las mujeres.",
+                "fechaNacimiento": "1931-02-18",
+                "fechaMuerte": "2019-08-05",
+                "nacionalidad": "Estadounidense",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Toni_Morrison_2008.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Ficción",
+                "descripcion": "Narrativa imaginaria que incluye novelas, cuentos y relatos que no están basados en hechos reales.",
+                "genero_padre": null
+            },
+            {
+                "nombre": "Drama",
+                "descripcion": "Género que presenta conflictos humanos intensos y situaciones emocionales profundas.",
+                "genero_padre": "Ficción"
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Premio Nobel",
+                "categoria": "Premios"
+            },
+            {
+                "nombre": "Literatura Estadounidense",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Memoria Histórica",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Familia",
+                "categoria": "Temática"
+            }
+        ]
+    },
+    {
+        "title": "Matilda",
+        "isbn": "978-84-204-8278-2",
+        "description": "Matilda es una niña extraordinariamente inteligente con poderes telequínéticos que debe lidiar con padres negligentes y una directora escolar tiránica.",
+        "publicationYear": 1988,
+        "pageCount": 240,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/61YQJxvN8bL.jpg",
+        "ageRating": "6+",
+        "readingDifficulty": "Fácil",
+        "authors": [
+            {
+                "nombre": "Roald Dahl",
+                "acerca_de": "Escritor británico de literatura infantil y juvenil. Es uno de los autores de libros infantiles más vendidos del mundo. Sus historias combinan humor negro con fantasía.",
+                "fechaNacimiento": "1916-09-13",
+                "fechaMuerte": "1990-11-23",
+                "nacionalidad": "Británica",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Roald_Dahl.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Infantil",
+                "descripcion": "Literatura dirigida especialmente a niños, con temáticas y lenguaje apropiados para su edad.",
+                "genero_padre": null
+            },
+            {
+                "nombre": "Fantasía",
+                "descripcion": "Género que presenta elementos mágicos, sobrenaturales o imaginarios en mundos ficticios.",
+                "genero_padre": "Ficción"
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Adaptado al Cine",
+                "categoria": "Adaptaciones"
+            },
+            {
+                "nombre": "Escuela",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Magia",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Crecimiento Personal",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Literatura Británica",
+                "categoria": "Región"
+            }
+        ]
+    },
+    {
+        "title": "Crónicas marcianas",
+        "isbn": "978-84-01-33850-2",
+        "description": "Colección de relatos interconectados que narran la colonización de Marte por parte de los humanos y el encuentro con la civilización marciana.",
+        "publicationYear": 1950,
+        "pageCount": 254,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/51YQJxvN8bL.jpg",
+        "ageRating": "16+",
+        "readingDifficulty": "Intermedio",
+        "authors": [
+            {
+                "nombre": "Ray Bradbury",
+                "acerca_de": "Escritor estadounidense de ciencia ficción y fantasía. Es conocido por sus obras distópicas y su estilo poético. Autor de clásicos como 'Fahrenheit 451' y 'Crónicas marcianas'.",
+                "fechaNacimiento": "1920-08-22",
+                "fechaMuerte": "2012-06-05",
+                "nacionalidad": "Estadounidense",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Ray_Bradbury_%281975%29_-cropped-.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Ciencia Ficción",
+                "descripcion": "Género que presenta situaciones futuristas, tecnología avanzada y exploración de conceptos científicos.",
+                "genero_padre": "Ficción"
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Clásico",
+                "categoria": "Clasificación"
+            },
+            {
+                "nombre": "Literatura Estadounidense",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Viajes en el Tiempo",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Filosofía",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Imprescindible",
+                "categoria": "Recomendaciones"
+            }
+        ]
+    },
+    {
+        "title": "1984",
+        "isbn": "978-84-376-0499-2",
+        "description": "En un futuro totalitario, Winston Smith trabaja en el Ministerio de la Verdad reescribiendo la historia, hasta que se rebela contra el sistema opresivo del Gran Hermano.",
+        "publicationYear": 1949,
+        "pageCount": 326,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/41YQJxvN8bL.jpg",
+        "ageRating": "16+",
+        "readingDifficulty": "Intermedio",
+        "authors": [
+            {
+                "nombre": "George Orwell",
+                "acerca_de": "Escritor y periodista británico. Es conocido por sus críticas al totalitarismo y por su apoyo al socialismo democrático. Autor de obras como '1984' y 'Rebelión en la granja'.",
+                "fechaNacimiento": "1903-06-25",
+                "fechaMuerte": "1950-01-21",
+                "nacionalidad": "Británica",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/7/7e/George_Orwell_press_photo.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Ciencia Ficción",
+                "descripcion": "Género que presenta situaciones futuristas, tecnología avanzada y exploración de conceptos científicos.",
+                "genero_padre": "Ficción"
+            },
+            {
+                "nombre": "Distopía",
+                "descripcion": "Subgénero que presenta sociedades futuras opresivas y deshumanizadas.",
+                "genero_padre": "Ciencia Ficción"
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Clásico",
+                "categoria": "Clasificación"
+            },
+            {
+                "nombre": "Distopía",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Política",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Literatura Británica",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Imprescindible",
+                "categoria": "Recomendaciones"
+            }
+        ]
+    },
+    {
+        "title": "Kafka en la orilla",
+        "isbn": "978-84-08-07455-2",
+        "description": "Dos historias paralelas: la de Kafka, un adolescente que huye de casa, y la de Nakata, un anciano con habilidades sobrenaturales. Una obra surrealista y profundamente emotiva.",
+        "publicationYear": 2002,
+        "pageCount": 615,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/31YQJxvN8bL.jpg",
+        "ageRating": "16+",
+        "readingDifficulty": "Avanzado",
+        "authors": [
+            {
+                "nombre": "Haruki Murakami",
+                "acerca_de": "Escritor japonés contemporáneo. Sus libros han sido traducidos a más de 50 idiomas y han vendido millones de copias en todo el mundo. Es conocido por su estilo surrealista y melancólico.",
+                "fechaNacimiento": "1949-01-12",
+                "fechaMuerte": null,
+                "nacionalidad": "Japonesa",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Haruki_Murakami_2018.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Ficción",
+                "descripcion": "Narrativa imaginaria que incluye novelas, cuentos y relatos que no están basados en hechos reales.",
+                "genero_padre": null
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Literatura Japonesa",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Contemporáneo",
+                "categoria": "Época"
+            },
+            {
+                "nombre": "Filosofía",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Narrativa Múltiple",
+                "categoria": "Estilo"
+            },
+            {
+                "nombre": "Bestseller",
+                "categoria": "Popularidad"
+            }
+        ]
+    },
+    {
+        "title": "El resplandor",
+        "isbn": "978-84-01-33851-9",
+        "description": "Jack Torrance acepta un trabajo como cuidador de invierno en el aislado Hotel Overlook, donde las fuerzas sobrenaturales del lugar comienzan a afectar su cordura.",
+        "publicationYear": 1977,
+        "pageCount": 447,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/21YQJxvN8bL.jpg",
+        "ageRating": "18+",
+        "readingDifficulty": "Intermedio",
+        "authors": [
+            {
+                "nombre": "Stephen King",
+                "acerca_de": "Escritor estadounidense de novelas de terror, suspenso, ciencia ficción y fantasía. Ha publicado más de 60 novelas y 200 relatos cortos. Es conocido como el 'Maestro del Terror'.",
+                "fechaNacimiento": "1947-09-21",
+                "fechaMuerte": null,
+                "nacionalidad": "Estadounidense",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Stephen_King%2C_Comicon.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Terror",
+                "descripcion": "Género que busca provocar miedo, ansiedad y suspenso en el lector a través de elementos sobrenaturales o psicológicos.",
+                "genero_padre": "Ficción"
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Adaptado al Cine",
+                "categoria": "Adaptaciones"
+            },
+            {
+                "nombre": "Familia",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Literatura Estadounidense",
+                "categoria": "Región"
+            }
+        ]
+    },
+    {
+        "title": "Las brujas",
+        "isbn": "978-84-204-8279-9",
+        "description": "Un niño descubre la existencia de una sociedad secreta de brujas que planea eliminar a todos los niños del mundo, y debe encontrar la manera de detenerlas.",
+        "publicationYear": 1983,
+        "pageCount": 208,
+        "language": "Español",
+        "coverImage": "https://images-na.ssl-images-amazon.com/images/I/11YQJxvN8bL.jpg",
+        "ageRating": "6+",
+        "readingDifficulty": "Fácil",
+        "authors": [
+            {
+                "nombre": "Roald Dahl",
+                "acerca_de": "Escritor británico de literatura infantil y juvenil. Es uno de los autores de libros infantiles más vendidos del mundo. Sus historias combinan humor negro con fantasía.",
+                "fechaNacimiento": "1916-09-13",
+                "fechaMuerte": "1990-11-23",
+                "nacionalidad": "Británica",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Roald_Dahl.jpg"
+            }
+        ],
+        "genres": [
+            {
+                "nombre": "Infantil",
+                "descripcion": "Literatura dirigida especialmente a niños, con temáticas y lenguaje apropiados para su edad.",
+                "genero_padre": null
+            },
+            {
+                "nombre": "Fantasía",
+                "descripcion": "Género que presenta elementos mágicos, sobrenaturales o imaginarios en mundos ficticios.",
+                "genero_padre": "Ficción"
+            }
+        ],
+        "tags": [
+            {
+                "nombre": "Adaptado al Cine",
+                "categoria": "Adaptaciones"
+            },
+            {
+                "nombre": "Aventura",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Magia",
+                "categoria": "Temática"
+            },
+            {
+                "nombre": "Literatura Británica",
+                "categoria": "Región"
+            },
+            {
+                "nombre": "Humor Negro",
+                "categoria": "Estilo"
+            }
+        ]
+    }
+]

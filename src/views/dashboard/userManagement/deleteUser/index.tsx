@@ -15,7 +15,7 @@ import {
 } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import WarningIcon from '@mui/icons-material/Warning';
-import userManagementService, { User } from '@/services/userManagement/userManagement.service';
+import userManagementService, { User } from '@/services/dashboard/userManagement/userManagement.service';
 
 interface DeleteUserProps {
     open: boolean;
@@ -62,12 +62,19 @@ export default function DeleteUser({ open, user, onClose, onUserDeleted }: Delet
             fullWidth
             PaperProps={{
                 sx: {
-                    backgroundColor: '#1f2937',
-                    color: 'white'
+                    backgroundColor: '#1a1a1a',
+                    color: '#fff',
+                    border: '1px solid #333',
+                    borderRadius: 2
                 }
             }}
         >
-            <DialogTitle sx={{ color: 'white', borderBottom: '1px solid #374151' }}>
+            <DialogTitle sx={{ 
+                color: '#60a5fa', 
+                borderBottom: '1px solid #333',
+                fontWeight: 600,
+                fontSize: '1.25rem'
+            }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                     <WarningIcon sx={{ color: '#ef4444' }} />
                     Confirmar Eliminación
@@ -75,12 +82,22 @@ export default function DeleteUser({ open, user, onClose, onUserDeleted }: Delet
             </DialogTitle>
             <DialogContent sx={{ pt: 3 }}>
                 {error && (
-                    <Alert severity="error" sx={{ mb: 2 }}>
+                    <Alert 
+                        severity="error" 
+                        sx={{ 
+                            mb: 2,
+                            bgcolor: '#7f1d1d',
+                            color: '#fecaca',
+                            '& .MuiAlert-icon': {
+                                color: '#ef4444'
+                            }
+                        }}
+                    >
                         {error}
                     </Alert>
                 )}
                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, alignItems: 'center', marginTop: 2 }}>
-                    <Typography variant="h6" sx={{ color: 'white', textAlign: 'center' }}>
+                    <Typography variant="h6" sx={{ color: '#fff', textAlign: 'center', fontWeight: 500 }}>
                         ¿Estás seguro de que quieres eliminar este usuario?
                     </Typography>
 
@@ -90,22 +107,22 @@ export default function DeleteUser({ open, user, onClose, onUserDeleted }: Delet
                             alignItems: 'center',
                             gap: 2,
                             p: 2,
-                            border: '1px solid #374151',
-                            borderRadius: 1,
-                            backgroundColor: '#374151',
+                            border: '1px solid #333',
+                            borderRadius: 2,
+                            backgroundColor: '#2d2d2d',
                             width: '100%'
                         }}>
-                            <Avatar sx={{ backgroundColor: '#6b7280', width: 56, height: 56 }}>
+                            <Avatar sx={{ backgroundColor: '#60a5fa', color: '#1a1a1a', width: 56, height: 56 }}>
                                 <PersonIcon sx={{ fontSize: 32 }} />
                             </Avatar>
                             <Box sx={{ flex: 1 }}>
-                                <Typography variant="h6" sx={{ color: 'white' }}>
+                                <Typography variant="h6" sx={{ color: '#fff', fontWeight: 500 }}>
                                     {user.username}
                                 </Typography>
-                                <Typography variant="body2" sx={{ color: '#d1d5db' }}>
+                                <Typography variant="body2" sx={{ color: '#9ca3af' }}>
                                     {user.email}
                                 </Typography>
-                                <Typography variant="body2" sx={{ color: '#9ca3af' }}>
+                                <Typography variant="body2" sx={{ color: '#60a5fa', fontSize: '0.75rem' }}>
                                     {user.role}
                                 </Typography>
                             </Box>
@@ -113,23 +130,33 @@ export default function DeleteUser({ open, user, onClose, onUserDeleted }: Delet
                     )}
 
                     <Box sx={{
-                        backgroundColor: '#fef3c7',
-                        border: '1px solid #f59e0b',
-                        borderRadius: 1,
+                        backgroundColor: '#7c2d12',
+                        border: '1px solid #ea580c',
+                        borderRadius: 2,
                         p: 2,
                         width: '100%'
                     }}>
-                        <Typography sx={{ color: '#92400e', textAlign: 'center' }}>
+                        <Typography sx={{ color: '#fed7aa', textAlign: 'center', fontSize: '0.875rem' }}>
                             <strong>Advertencia:</strong> Esta acción no se puede deshacer. El usuario será eliminado permanentemente del sistema.
                         </Typography>
                     </Box>
                 </Box>
             </DialogContent>
-            <DialogActions sx={{ borderTop: '1px solid #374151', pt: 2 }}>
+            <DialogActions sx={{ 
+                borderTop: '1px solid #333', 
+                pt: 2,
+                gap: 2
+            }}>
                 <Button
                     onClick={handleClose}
                     disabled={loading}
-                    sx={{ color: '#d1d5db' }}
+                    sx={{ 
+                        color: '#9ca3af',
+                        '&:hover': {
+                            backgroundColor: 'rgba(156, 163, 175, 0.1)',
+                            color: '#fff'
+                        }
+                    }}
                 >
                     Cancelar
                 </Button>
@@ -137,11 +164,20 @@ export default function DeleteUser({ open, user, onClose, onUserDeleted }: Delet
                     onClick={handleConfirm}
                     variant="contained"
                     disabled={loading}
-                    startIcon={loading ? <CircularProgress size={20} sx={{ color: 'white' }} /> : null}
+                    startIcon={loading ? <CircularProgress size={20} sx={{ color: '#fff' }} /> : null}
                     sx={{
                         backgroundColor: '#ef4444',
-                        '&:hover': { backgroundColor: '#dc2626' },
-                        '&:disabled': { backgroundColor: '#374151' }
+                        color: '#fff',
+                        fontWeight: 600,
+                        '&:hover': { 
+                            backgroundColor: '#dc2626',
+                            transform: 'translateY(-1px)'
+                        },
+                        '&:disabled': { 
+                            backgroundColor: '#4b5563',
+                            color: '#9ca3af'
+                        },
+                        transition: 'all 0.2s ease'
                     }}
                 >
                     {loading ? 'Eliminando...' : 'Eliminar Usuario'}

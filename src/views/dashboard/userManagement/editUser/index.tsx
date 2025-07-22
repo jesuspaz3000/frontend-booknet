@@ -16,7 +16,7 @@ import {
     CircularProgress,
     Alert
 } from '@mui/material';
-import userManagementService from '@/services/userManagement/userManagement.service';
+import userManagementService from '@/services/dashboard/userManagement/userManagement.service';
 
 interface UserFormData {
     username: string;
@@ -127,23 +127,40 @@ export default function EditUser({ open, userId, onClose, onUserUpdated }: EditU
             fullWidth
             PaperProps={{
                 sx: {
-                    backgroundColor: '#1f2937',
-                    color: 'white'
+                    backgroundColor: '#1a1a1a',
+                    color: '#fff',
+                    border: '1px solid #333',
+                    borderRadius: 2
                 }
             }}
         >
-            <DialogTitle sx={{ color: 'white', borderBottom: '1px solid #374151' }}>
+            <DialogTitle sx={{ 
+                color: '#60a5fa', 
+                borderBottom: '1px solid #333',
+                fontWeight: 600,
+                fontSize: '1.25rem'
+            }}>
                 Editar Usuario
             </DialogTitle>
             <DialogContent sx={{ pt: 3 }}>
                 {loadingUser ? (
                     <Box sx={{ display: 'flex', justifyContent: 'center', py: 4 }}>
-                        <CircularProgress sx={{ color: 'white' }} />
+                        <CircularProgress sx={{ color: '#60a5fa' }} />
                     </Box>
                 ) : (
                     <>
                         {error && (
-                            <Alert severity="error" sx={{ mb: 2 }}>
+                            <Alert 
+                                severity="error" 
+                                sx={{ 
+                                    mb: 2,
+                                    bgcolor: '#7f1d1d',
+                                    color: '#fecaca',
+                                    '& .MuiAlert-icon': {
+                                        color: '#ef4444'
+                                    }
+                                }}
+                            >
                                 {error}
                             </Alert>
                         )}
@@ -156,12 +173,16 @@ export default function EditUser({ open, userId, onClose, onUserUpdated }: EditU
                                 disabled={loading}
                                 sx={{
                                     '& .MuiOutlinedInput-root': {
-                                        color: 'white',
-                                        '& fieldset': { borderColor: '#374151' },
+                                        color: '#fff',
+                                        backgroundColor: '#2d2d2d',
+                                        '& fieldset': { borderColor: '#333' },
                                         '&:hover fieldset': { borderColor: '#60a5fa' },
-                                        '&.Mui-focused fieldset': { borderColor: '#2563eb' }
+                                        '&.Mui-focused fieldset': { borderColor: '#60a5fa' }
                                     },
-                                    '& .MuiInputLabel-root': { color: '#d1d5db' }
+                                    '& .MuiInputLabel-root': { 
+                                        color: '#9ca3af',
+                                        '&.Mui-focused': { color: '#60a5fa' }
+                                    }
                                 }}
                             />
                             <TextField
@@ -172,27 +193,56 @@ export default function EditUser({ open, userId, onClose, onUserUpdated }: EditU
                                 disabled={loading}
                                 sx={{
                                     '& .MuiOutlinedInput-root': {
-                                        color: 'white',
-                                        '& fieldset': { borderColor: '#374151' },
+                                        color: '#fff',
+                                        backgroundColor: '#2d2d2d',
+                                        '& fieldset': { borderColor: '#333' },
                                         '&:hover fieldset': { borderColor: '#60a5fa' },
-                                        '&.Mui-focused fieldset': { borderColor: '#2563eb' }
+                                        '&.Mui-focused fieldset': { borderColor: '#60a5fa' }
                                     },
-                                    '& .MuiInputLabel-root': { color: '#d1d5db' }
+                                    '& .MuiInputLabel-root': { 
+                                        color: '#9ca3af',
+                                        '&.Mui-focused': { color: '#60a5fa' }
+                                    }
                                 }}
                             />
                             <Box sx={{ display: 'flex', gap: 2 }}>
                                 <FormControl fullWidth>
-                                    <InputLabel sx={{ color: '#d1d5db' }}>Rol</InputLabel>
+                                    <InputLabel sx={{ 
+                                        color: '#9ca3af',
+                                        '&.Mui-focused': { color: '#60a5fa' }
+                                    }}>Rol</InputLabel>
                                     <Select
                                         value={formData.role}
                                         label="Rol"
                                         disabled={loading}
                                         onChange={(e) => setFormData({ ...formData, role: e.target.value as 'USER' | 'ADMIN' })}
                                         sx={{
-                                            color: 'white',
-                                            '& .MuiOutlinedInput-notchedOutline': { borderColor: '#374151' },
+                                            color: '#fff',
+                                            backgroundColor: '#2d2d2d',
+                                            '& .MuiOutlinedInput-notchedOutline': { borderColor: '#333' },
                                             '&:hover .MuiOutlinedInput-notchedOutline': { borderColor: '#60a5fa' },
-                                            '&.Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: '#2563eb' }
+                                            '&.Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: '#60a5fa' },
+                                            '& .MuiSvgIcon-root': { color: '#60a5fa' }
+                                        }}
+                                        MenuProps={{
+                                            PaperProps: {
+                                                sx: {
+                                                    bgcolor: '#2d2d2d',
+                                                    '& .MuiMenuItem-root': {
+                                                        color: '#fff',
+                                                        '&:hover': {
+                                                            backgroundColor: '#374151'
+                                                        },
+                                                        '&.Mui-selected': {
+                                                            backgroundColor: '#60a5fa',
+                                                            color: '#1a1a1a',
+                                                            '&:hover': {
+                                                                backgroundColor: '#3b82f6'
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
                                         }}
                                     >
                                         <MenuItem value="USER">Usuario</MenuItem>
@@ -204,11 +254,21 @@ export default function EditUser({ open, userId, onClose, onUserUpdated }: EditU
                     </>
                 )}
             </DialogContent>
-            <DialogActions sx={{ borderTop: '1px solid #374151', pt: 2 }}>
+            <DialogActions sx={{ 
+                borderTop: '1px solid #333', 
+                pt: 2,
+                gap: 2
+            }}>
                 <Button 
                     onClick={handleClose}
                     disabled={loading || loadingUser}
-                    sx={{ color: '#d1d5db' }}
+                    sx={{ 
+                        color: '#9ca3af',
+                        '&:hover': {
+                            backgroundColor: 'rgba(156, 163, 175, 0.1)',
+                            color: '#fff'
+                        }
+                    }}
                 >
                     Cancelar
                 </Button>
@@ -216,11 +276,20 @@ export default function EditUser({ open, userId, onClose, onUserUpdated }: EditU
                     onClick={handleSave}
                     variant="contained"
                     disabled={loading || loadingUser}
-                    startIcon={loading ? <CircularProgress size={20} sx={{ color: 'white' }} /> : null}
+                    startIcon={loading ? <CircularProgress size={20} sx={{ color: '#1a1a1a' }} /> : null}
                     sx={{
-                        backgroundColor: '#2563eb',
-                        '&:hover': { backgroundColor: '#1d4ed8' },
-                        '&:disabled': { backgroundColor: '#374151' }
+                        backgroundColor: '#60a5fa',
+                        color: '#1a1a1a',
+                        fontWeight: 600,
+                        '&:hover': { 
+                            backgroundColor: '#3b82f6',
+                            transform: 'translateY(-1px)'
+                        },
+                        '&:disabled': { 
+                            backgroundColor: '#4b5563',
+                            color: '#9ca3af'
+                        },
+                        transition: 'all 0.2s ease'
                     }}
                 >
                     {loading ? 'Actualizando...' : 'Actualizar Usuario'}

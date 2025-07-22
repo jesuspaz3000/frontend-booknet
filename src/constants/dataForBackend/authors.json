@@ -1,0 +1,191 @@
+[
+  {
+    "id": "gabriel-garcia-marquez",
+    "nombre": "Gabriel García Márquez",
+    "acerca_de": "Escritor colombiano, premio Nobel de Literatura en 1982. Considerado uno de los autores más significativos del siglo XX y uno de los mejores en lengua española. Conocido por popularizar el realismo mágico.",
+    "fechaNacimiento": "1927-03-06",
+    "fechaMuerte": "2014-04-17",
+    "nacionalidad": "Colombiana",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Gabriel_Garc%C3%ADa_M%C3%A1rquez.jpg"
+  },
+  {
+    "id": "isabel-allende",
+    "nombre": "Isabel Allende",
+    "acerca_de": "Escritora chilena-estadounidense. Es considerada la escritora viva de lengua española más leída del mundo. Sus libros han sido traducidos a más de 42 idiomas y han vendido más de 77 millones de ejemplares.",
+    "fechaNacimiento": "1942-08-02",
+    "fechaMuerte": null,
+    "nacionalidad": "Chilena",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Isabel_Allende_-_001.jpg"
+  },
+  {
+    "id": "mario-vargas-llosa",
+    "nombre": "Mario Vargas Llosa",
+    "acerca_de": "Escritor peruano. Premio Nobel de Literatura en 2010. Es uno de los exponentes principales del boom latinoamericano junto a García Márquez, Julio Cortázar y Carlos Fuentes.",
+    "fechaNacimiento": "1936-03-28",
+    "fechaMuerte": null,
+    "nacionalidad": "Peruana",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Mario_Vargas_Llosa_2011.jpg"
+  },
+  {
+    "id": "julio-cortazar",
+    "nombre": "Julio Cortázar",
+    "acerca_de": "Escritor argentino nacionalizado francés. Considerado uno de los autores más innovadores y originales de su tiempo, maestro del relato corto, la prosa poética y la narración breve en general.",
+    "fechaNacimiento": "1914-08-26",
+    "fechaMuerte": "1984-02-12",
+    "nacionalidad": "Argentina",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Julio_Cort%C3%A1zar.jpg"
+  },
+  {
+    "id": "jorge-luis-borges",
+    "nombre": "Jorge Luis Borges",
+    "acerca_de": "Escritor argentino, uno de los autores más destacados de la literatura del siglo XX. Publicó ensayos breves, cuentos y poemas. Su obra, fundamental en la literatura y en el pensamiento humano, ha sido objeto de minuciosos análisis y de múltiples interpretaciones.",
+    "fechaNacimiento": "1899-08-24",
+    "fechaMuerte": "1986-06-14",
+    "nacionalidad": "Argentina",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Jorge_Luis_Borges_1951.jpg"
+  },
+  {
+    "id": "octavio-paz",
+    "nombre": "Octavio Paz",
+    "acerca_de": "Poeta, escritor, ensayista y diplomático mexicano, premio Nobel de Literatura en 1990. Se le considera uno de los más grandes escritores del siglo XX y uno de los grandes poetas hispanos de todos los tiempos.",
+    "fechaNacimiento": "1914-03-31",
+    "fechaMuerte": "1998-04-19",
+    "nacionalidad": "Mexicana",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Octavio_Paz.jpg"
+  },
+  {
+    "id": "paulo-coelho",
+    "nombre": "Paulo Coelho",
+    "acerca_de": "Escritor brasileño. Es uno de los escritores más leídos del mundo, con más de 320 millones de libros vendidos en más de 170 países, traducidos a 83 idiomas.",
+    "fechaNacimiento": "1947-08-24",
+    "fechaMuerte": null,
+    "nacionalidad": "Brasileña",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/8/88/Paulo_Coelho_nrkbeta.jpg"
+  },
+  {
+    "id": "laura-esquivel",
+    "nombre": "Laura Esquivel",
+    "acerca_de": "Escritora mexicana. Su primera novela, 'Como agua para chocolate', se convirtió en un bestseller en México y Estados Unidos, y fue adaptada al cine.",
+    "fechaNacimiento": "1950-09-30",
+    "fechaMuerte": null,
+    "nacionalidad": "Mexicana",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Laura_Esquivel.jpg"
+  },
+  {
+    "id": "roberto-bolano",
+    "nombre": "Roberto Bolaño",
+    "acerca_de": "Escritor chileno. Considerado uno de los escritores más importantes de la literatura latinoamericana de finales del siglo XX. Su obra ha sido traducida a decenas de idiomas.",
+    "fechaNacimiento": "1953-04-28",
+    "fechaMuerte": "2003-07-15",
+    "nacionalidad": "Chilena",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Roberto_Bola%C3%B1o.jpg"
+  },
+  {
+    "id": "carlos-ruiz-zafon",
+    "nombre": "Carlos Ruiz Zafón",
+    "acerca_de": "Escritor español. Autor de novelas como 'La Sombra del Viento', que se convirtió en un fenómeno editorial mundial. Sus libros han sido traducidos a más de 50 idiomas.",
+    "fechaNacimiento": "1964-09-25",
+    "fechaMuerte": "2020-06-19",
+    "nacionalidad": "Española",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Carlos_Ruiz_Zaf%C3%B3n.jpg"
+  },
+  {
+    "id": "jrr-tolkien",
+    "nombre": "J.R.R. Tolkien",
+    "acerca_de": "Escritor británico, filólogo y profesor universitario. Creador de la Tierra Media y autor de 'El Hobbit' y 'El Señor de los Anillos'. Considerado el padre de la literatura fantástica moderna.",
+    "fechaNacimiento": "1892-01-03",
+    "fechaMuerte": "1973-09-02",
+    "nacionalidad": "Británica",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Tolkien_1916.jpg"
+  },
+  {
+    "id": "agatha-christie",
+    "nombre": "Agatha Christie",
+    "acerca_de": "Escritora británica especializada en novelas de misterio. Creadora de los detectives Hercule Poirot y Miss Marple. Es la novelista más publicada de todos los tiempos.",
+    "fechaNacimiento": "1890-09-15",
+    "fechaMuerte": "1976-01-12",
+    "nacionalidad": "Británica",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Agatha_Christie.png"
+  },
+  {
+    "id": "stephen-king",
+    "nombre": "Stephen King",
+    "acerca_de": "Escritor estadounidense de novelas de terror, suspenso, ciencia ficción y fantasía. Ha publicado más de 60 novelas y 200 relatos cortos. Muchas de sus obras han sido adaptadas al cine y televisión.",
+    "fechaNacimiento": "1947-09-21",
+    "fechaMuerte": null,
+    "nacionalidad": "Estadounidense",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Stephen_King%2C_Comicon.jpg"
+  },
+  {
+    "id": "haruki-murakami",
+    "nombre": "Haruki Murakami",
+    "acerca_de": "Escritor japonés contemporáneo. Sus libros combinan elementos del realismo mágico, surrealismo y cultura pop. Ha sido traducido a más de 50 idiomas y es candidato recurrente al Premio Nobel.",
+    "fechaNacimiento": "1949-01-12",
+    "fechaMuerte": null,
+    "nacionalidad": "Japonesa",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Haruki_Murakami.jpg"
+  },
+  {
+    "id": "elena-poniatowska",
+    "nombre": "Elena Poniatowska",
+    "acerca_de": "Escritora y periodista mexicana de origen franco-polaco. Premio Cervantes 2013. Pionera del periodismo narrativo en México y defensora de los derechos humanos.",
+    "fechaNacimiento": "1932-05-19",
+    "fechaMuerte": null,
+    "nacionalidad": "Mexicana",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Elena_Poniatowska.jpg"
+  },
+  {
+    "id": "isaac-asimov",
+    "nombre": "Isaac Asimov",
+    "acerca_de": "Escritor y profesor de bioquímica estadounidense de origen ruso. Uno de los maestros de la ciencia ficción. Autor de más de 500 libros, incluyendo la famosa saga de la Fundación.",
+    "fechaNacimiento": "1920-01-02",
+    "fechaMuerte": "1992-04-06",
+    "nacionalidad": "Estadounidense",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/3/34/Isaac.Asimov01.jpg"
+  },
+  {
+    "id": "chimamanda-ngozi-adichie",
+    "nombre": "Chimamanda Ngozi Adichie",
+    "acerca_de": "Escritora nigeriana. Sus novelas y ensayos abordan temas de identidad, feminismo y la experiencia africana contemporánea. Reconocida mundialmente por su obra literaria y activismo.",
+    "fechaNacimiento": "1977-09-15",
+    "fechaMuerte": null,
+    "nacionalidad": "Nigeriana",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Chimamanda-Ngozi-Adichie-2013.jpg"
+  },
+  {
+    "id": "ray-bradbury",
+    "nombre": "Ray Bradbury",
+    "acerca_de": "Escritor estadounidense de ciencia ficción, terror y fantasía. Autor de clásicos como 'Fahrenheit 451' y 'Crónicas marcianas'. Sus obras exploran los peligros de la tecnología y la censura.",
+    "fechaNacimiento": "1920-08-22",
+    "fechaMuerte": "2012-06-05",
+    "nacionalidad": "Estadounidense",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/7/75/Ray_Bradbury.jpg"
+  },
+  {
+    "id": "roald-dahl",
+    "nombre": "Roald Dahl",
+    "acerca_de": "Escritor británico de origen noruego. Famoso por sus libros infantiles como 'Charlie y la fábrica de chocolate', 'Matilda' y 'Las brujas'. También escribió relatos para adultos con elementos de humor negro.",
+    "fechaNacimiento": "1916-09-13",
+    "fechaMuerte": "1990-11-23",
+    "nacionalidad": "Británica",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Roald_Dahl.jpg"
+  },
+  {
+    "id": "miguel-de-cervantes",
+    "nombre": "Miguel de Cervantes",
+    "acerca_de": "Escritor español del Siglo de Oro. Autor de 'Don Quijote de la Mancha', considerada la primera novela moderna y una de las obras más importantes de la literatura universal.",
+    "fechaNacimiento": "1547-09-29",
+    "fechaMuerte": "1616-04-22",
+    "nacionalidad": "Española",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/0/02/Cervantes_J%C3%A1uregui.jpg"
+  },
+  {
+    "id": "toni-morrison",
+    "nombre": "Toni Morrison",
+    "acerca_de": "Escritora estadounidense, premio Nobel de Literatura en 1993. Sus novelas exploran la experiencia afroamericana, especialmente la de las mujeres. Autora de obras como 'Beloved' y 'La canción de Salomón'.",
+    "fechaNacimiento": "1931-02-18",
+    "fechaMuerte": "2019-08-05",
+    "nacionalidad": "Estadounidense",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Toni_Morrison_2008.jpg"
+  }
+]

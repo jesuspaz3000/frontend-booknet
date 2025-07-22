@@ -27,7 +27,7 @@ class ApiService {
   constructor() {
     this.api = axios.create({
       baseURL: process.env.NEXT_PUBLIC_API_URL,
-      timeout: 10000,
+      timeout: 30000, // 30 segundos para evitar timeouts en carruseles
       headers: {
         'Content-Type': 'application/json',
       },
@@ -115,6 +115,17 @@ class ApiService {
     return response.data;
   }
 
+  // POST request para upload de archivos
+  async upload<T>(endpoint: string, formData: FormData): Promise<ApiResponse<T>> {
+    const response = await this.api.post<ApiResponse<T>>(endpoint, formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+      timeout: 300000, // 5 minutos para uploads de archivos grandes
+    });
+    return response.data;
+  }
+
   // PUT request
   async put<T>(endpoint: string, data?: Record<string, unknown>): Promise<ApiResponse<T>> {
     const response = await this.api.put<ApiResponse<T>>(endpoint, data);
@@ -150,7 +161,7 @@ class ApiService {
   async postWithoutAuth<T>(endpoint: string, data?: Record<string, unknown>): Promise<ApiResponse<T>> {
     const response = await axios.post<ApiResponse<T>>(`${process.env.NEXT_PUBLIC_API_URL}${endpoint}`, data, {
       headers: { 'Content-Type': 'application/json' },
-      timeout: 10000
+      timeout: 30000 // 30 segundos para evitar timeouts
     });
     return response.data;
   }
