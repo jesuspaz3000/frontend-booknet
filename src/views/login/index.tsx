@@ -109,7 +109,7 @@ export default function Login() {
                     // Formulario de login
                     <>
                         <Image
-                            src="/Images/BookNetLogo.png"
+                            src="/images/BookNetLogo.png"
                             alt="Logo"
                             width={400}
                             height={400}
